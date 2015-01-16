@@ -20,7 +20,65 @@ if ($_GET['sair'] == "true") {
     
 
     <!-- Bootstrap -->
+<<<<<<< HEAD
     <link href="bootstra
+=======
+    <link href="bootstrap/dist/css/bootstrap.css" rel="stylesheet" media="screen">
+  	<link href="bootstrap/dist/assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap-themex.css">
+
+    <link href="css/estilo.css" rel="stylesheet" media="screen">
+
+  </head>
+  <body>
+
+    <script src="jquery/jquery-latest.js"></script>
+    <script src="bootstrap/dist/js/bootstrap.js"></script>
+
+
+    <center><h1>AGENDE-SE</h1></center>
+
+    <nav class="navbar navbar-inverse" role="navigation">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="http://localhost/projeto">Home</a>
+
+<?php
+if ($_SESSION['logado']) { ?>          
+          <a class="navbar-brand" href="http://localhost/projeto/?sair=true">Meus Dados</a>
+          <a class="navbar-brand" href="http://localhost/projeto/?sair=true">Sair</a>
+
+<?php } ?>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+<?php
+if (!$_SESSION['logado']) { ?>
+
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#"  data-toggle="modal" data-target="#exampleModal" data-whatever="@fat">Login <span class="sr-only">(current)</span></a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Cadastre-se<span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="http://localhost/projeto/?page=cadastre-se">Cliente</a></li>
+                <li><a href="http://localhost/projeto/?page=cadastre-se">Prestador de Serviços</a></li>
+              </ul>
+            </li>
+          </ul>
+<?php  }  ?>
+
+          <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Pesquisar">
+>>>>>>> parent of 428ecb5... trocado o texto pesquisar por procurar
             </div>
             <button type="submit" class="btn btn-default">Pesquisa</button>
           </form>
