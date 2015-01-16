@@ -74,7 +74,7 @@ if (!$_SESSION['logado']) { ?>
 
           <form class="navbar-form navbar-left" role="search">
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Pesquisar">
+              <input type="text" class="form-control" placeholder="Procurar">
             </div>
             <button type="submit" class="btn btn-default">Pesquisa</button>
           </form>
