@@ -45,7 +45,7 @@ if ($_GET['sair'] == "true") {
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="http://localhost/projeto">Home</a>
+          <a class="navbar-brand" href="http://localhost/projeto">Página Inicial</a>
 
 <?php
 if ($_SESSION['logado']) { ?>          
@@ -74,7 +74,7 @@ if (!$_SESSION['logado']) { ?>
 
           <form class="navbar-form navbar-left" role="search">
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Search">
+              <input type="text" class="form-control" placeholder="Pesquisar">
             </div>
             <button type="submit" class="btn btn-default">Pesquisa</button>
           </form>
