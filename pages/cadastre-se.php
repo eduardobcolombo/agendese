@@ -18,7 +18,7 @@ if ($_POST['cadastrar'] == 'Cadastrar') {
 
 	<h1>Cliente</h1>
 
-	<p>Faça seu cadastro</p>
+	<p>Explicação do cadastro</p>
 
 
 		<form name="frmCadastraVeiculo" method="POST" action="">
