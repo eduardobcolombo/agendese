@@ -21,8 +21,6 @@ if ($_GET['sair'] == "true") {
 
     <!-- Bootstrap -->
 
-    <link href="bootstra
-=======
     <link href="bootstrap/dist/css/bootstrap.css" rel="stylesheet" media="screen">
   	<link href="bootstrap/dist/assets/css/bootstrap-responsive.css" rel="stylesheet">
     <link rel="stylesheet" href="bootstrap/dist/css/bootstrap-themex.css">
