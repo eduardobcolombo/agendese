@@ -20,7 +20,7 @@ if ($_GET['sair'] == "true") {
     
 
     <!-- Bootstrap -->
-<<<<<<< HEAD
+
     <link href="bootstra
 =======
     <link href="bootstrap/dist/css/bootstrap.css" rel="stylesheet" media="screen">
@@ -78,7 +78,7 @@ if (!$_SESSION['logado']) { ?>
           <form class="navbar-form navbar-left" role="search">
             <div class="form-group">
               <input type="text" class="form-control" placeholder="Pesquisar">
->>>>>>> parent of 428ecb5... trocado o texto pesquisar por procurar
+
             </div>
             <button type="submit" class="btn btn-default">Pesquisa</button>
           </form>
