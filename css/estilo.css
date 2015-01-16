@@ -1,0 +1,31 @@
+.clear{
+	
+	clear:both;
+}
+
+#boxCadastre-se{
+	width:30%;
+	float:left;
+	border:2 px;
+}
+table, tr, td{
+	background: #CC33CC;
+	border:0px;
+}
+body{
+
+	color:black;
+	background: #FF99FF;
+	margin: 0 auto;
+	text-align: center;
+}
+
+
+#boxImagem{
+
+}
+.panel{
+	background: #FAB7C3;
+	border:0px;
+	
+}
