@@ -18,7 +18,7 @@ if ($_POST['cadastrar'] == 'Cadastrar') {
 
 	<h1>Cliente</h1>
 
-	<p>Explicação do cadastro</p>
+	<p>FaÃ§a seu cadastro</p>
 
 
 		<form name="frmCadastraVeiculo" method="POST" action="">
@@ -51,7 +51,7 @@ if ($_POST['cadastrar'] == 'Cadastrar') {
 				<tr>
 					<td colspan=2 align=center>
 	<input type='checkbox' name='concordaTermos' id='concordaTermos' value='Sim' /> 
-	* Concordo com os Termos de Serviço e a Política de Privacidade.
+	* Concordo com os Termos de ServiÃ§o e a PolÃ­tica de Privacidade.
 					</td>
 				</tr>						
 				<tr>
