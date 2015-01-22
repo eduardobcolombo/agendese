@@ -12,7 +12,7 @@ require ("includes/util.php");
 	if($linha->senha == md5($senha)) {
 		echo "
 <script>
-location.href='http://localhost/projeto/';
+location.href='http://localhost/agendese/';
 </script>
 		";
 

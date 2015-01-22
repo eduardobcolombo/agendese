@@ -1,3 +1,7 @@
+
+
+
+
 function verificaAcesso() {
 	var ds_usuario = document.getElementsByName("ds_usuario")[0].value;
 	var ds_senha   = document.getElementsByName("ds_senha")[0].value;
@@ -26,7 +30,7 @@ function get() {
 			try {
 				http = new ActiveXObject("Microsoft.XMLHTTP");
 			} catch(e){
-				window.alert("Erro, browser nÃ£o detectou XMLHTTP. -> "+e);
+				window.alert("Erro, browser não detectou XMLHTTP. -> "+e);
 			}
 		}
 	}

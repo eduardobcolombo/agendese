@@ -15,7 +15,7 @@ if ($_GET['sair'] == "true") {
   <head>
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>agendese - <?php echo $_SESSION['nomeCliente']; ?></title>
- <script src="js/default.js"></script>
+    <script src="js/default.js"></script>
 
     
 
@@ -109,20 +109,20 @@ if ($_SESSION['tipo'] == "Administrador") { ?>
         <form role="form">
           <div class="form-group">
             <label for="recipient-name" class="control-label">Usuário:</label>
-            <input type="text" class="form-control" id="ds_usuario">
+            <input type="text" class="form-control" id="ds_usuario" name="ds_usuario">
           </div>
           <div class="form-group">
             <label for="message-text" class="control-label">Senha:</label>
-            <textarea class="form-control" id="ds_senha"></textarea>
+            <input class="form-control" id="ds_senha" name="ds_senha">
           </div>
         </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Sair</button>
-        <button type="button" class="btn btn-primary" onclick="verificaAcesso('validaLogin.php','msgLogin')">Entrar</button>
+        <button type="button" class="btn btn-primary" onclick="verificaAcesso()">Entrar</button>
       </div>
 
-      <div id="msgLogin">123</div>
+      <div id="msgLogin"></div>
     </div>
   </div>
 </div>
