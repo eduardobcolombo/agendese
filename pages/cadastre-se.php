@@ -152,7 +152,26 @@ if ($_POST['cadastrar'] == 'Cadastrar') {
 					<td align=right>*CodigoSegurançaBox</td>
 					<td><input type="text" name="codigosegurancabox" id="codigosegurancabox" value="" /></td>
 				</tr>
-				
+				<tr>
+					<td colspan=2 align=left>
+	<input type='checkbox' name='manicure' id='manicure' value="" /> 
+	Manicure
+				</td>
+				<tr>
+					<td colspan=2 align=left>
+	<input type='checkbox' name='cabelereiro' id='cabelereiro' value="" /> 
+	Cabelereiro
+				</td>
+				<tr>
+					<td colspan=2 align=left>
+	<input type='checkbox' name='massoterapeuta' id='massoterapeuta' value="" /> 
+	Massoterapeuta
+				</td>
+				<tr>
+					<td colspan=2 align=left>
+	<input type='checkbox' name='fisioterapeuta' id='fisioterapeuta' value="" /> 
+	Fisioterapeuta
+				</td>
 				<tr>
 					<td align=right>*Senha</td>
 					<td><input type="password" name="senha" id="senha" value="" /></td>
