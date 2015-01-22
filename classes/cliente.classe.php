@@ -7,6 +7,7 @@ class Cliente
 	public $login;
 	public $senha;
 	public $tipo;
+	public $servico;
 
 	function setNomeCliente($nomeCliente) 
 	{
@@ -32,7 +33,13 @@ class Cliente
 	function setTipo($tipo) 
 	{
 		$this ->tipo = $tipo;
-			}			
+			}	
+	function setServico($setServiço) 
+	{
+		$this ->servico = $sevico;
+			}	
+
+
 	function getNomeCliente() 
 	{
 		return $this ->nomeCliente;
@@ -59,7 +66,25 @@ class Cliente
 	function getTipo() 
 	{
 		return $this ->tipo;
-			}		
+			}	
+	function getServico() 
+		{
+			GLOBAL $db;
+				try
+		{
+		    
+		  $res = $db->query("SELECT Id, servico FROM servico");
+		  return $res;
+
+		   // ENCERRA O OBJETO DE CONEXÃO COM O BANCO
+		// SE HOUVER O OBJETO DE CONEXÃO COM O BANCO
+		} catch (PDOException $e) {
+		  //IMPRIME O ERRO
+		  print "Erro!: " .$e->getMessage() . "<br />";
+		  // MORRE
+		  die();
+			}
+		}//fecha metodo
 
  // FUNÇÃO INSERIR NO BANCO DE DADOS  
 
@@ -70,7 +95,7 @@ class Cliente
 		{
 		    if ($id_cliente == null) {
 	 		 			  $res = $db->exec("INSERT INTO cliente (nomeCliente, telefoneCliente, email, login, senha, tipo)
-		                                VALUES    ('".$this->nomeCliente."','".$this->telefoneCliente."','".$this->email."','".$this->login."', '".$this->senha."','".$this->tipo."')");
+		                                VALUES    ('".$this->nomeCliente."','".$this->telefoneCliente."','".$this->email."','".$this->login."', '".$this->senha."','".$this->tipo."'");
 		// SE HOUVER O OBJETO DE CONEXÃO COM O BANCO
 		} else {
 			$res = $db->exec("UPDATE cliente  SET 
