@@ -33,7 +33,7 @@ if ($_GET['sair'] == "true") {
     <script src="bootstrap/dist/js/bootstrap.js"></script>
 
 
-    <center><h1>Academia da Web</h1></center>
+    <center><h1>Agende-se</h1></center>
 
     <nav class="navbar navbar-inverse" role="navigation">
       <div class="container-fluid">
