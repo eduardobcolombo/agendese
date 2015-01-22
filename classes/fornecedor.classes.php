@@ -204,16 +204,28 @@ class Fornecedor
 
 	try
 		{
-		    if ($id_cliente == null) {
-	 		 			  $res = $db->exec("INSERT INTO cliente (nomeCliente, telefoneCliente, email, login, senha, tipo)
+		    if ($id_fornecedor == null) {
+	 		 			  $res = $db->exec("INSERT INTO fornecedor (nome, telefone, celular, email, site, cep, logradouro, numero, bairro, cidade, estado, latitude, longitude, cpf_cnpj, ie, login, senha, tipo)
 		                                VALUES    ('".$this->nomeCliente."','".$this->telefoneCliente."','".$this->email."','".$this->login."', '".$this->senha."','".$this->tipo."'");
 		// SE HOUVER O OBJETO DE CONEXÃO COM O BANCO
 		} else {
-			$res = $db->exec("UPDATE cliente  SET 
-		                                  nomeCliente = '".$this->nomeCliente."',
-		                                  telefoneCliente = '".$this->telefoneCliente."',
+			$res = $db->exec("UPDATE fornecedor  SET 
+		                                  nome = '".$this->nome."',
+		                                  telefone = '".$this->telefone."',
+		                                  celular = '".$this->celular."',
 		                                  email = '".$this->email."',
-		                                  login = '".$this->login."',
+		                                  site = '".$this->site."',
+		                                  cep = '".$this->cep."',
+		                                  logradouro = '".$this->logradouro."',
+		                                  numero = '".$this->numero."',
+		                                  bairro = '".$this->bairro."',
+		                                  cidade = '".$this->cidade."',
+		                                  estado = '".$this->estado."',
+		                                  latitude = '".$this->latitude."',
+		                                  longitude = '".$this->longitude."',
+		                                  cpf_cnpj = '".$this->cpf_cnpj."',
+		                                  ie = '".$this->ie."',
+		                                   login= '".$this->login."',
 		                                  senha = '".$this->senha."'
 		                                  tipo = '".$this->tipo."'
 		                                  WHERE id = '".$id_cliente."' ");
@@ -232,13 +244,13 @@ class Fornecedor
 		//function gravaNoBanco() {}
 
 
-		function getCliente() 
+		function getfornecedor() 
 	{
 			GLOBAL $db;
 				try
 		{
 		    
-		  $res = $db->query("SELECT Id,nomeCliente, telefoneCliente, email, login, senha, tipo FROM cliente");
+		  $res = $db->query("SELECT Id,nome, telefone, celular, email, site, cep, logradouro, numero, bairro, cidade, estado, latitude, longitude, cpf_cnpj, ie, login, senha, tipo FROM fornecedor");
 		  return $res;
 
 		   // ENCERRA O OBJETO DE CONEXÃO COM O BANCO
@@ -249,45 +261,6 @@ class Fornecedor
 		  // MORRE
 		  die();
 			}
-		}//fecha metodo
-
-			function getClienteByLogin($login) 
-	{
-			GLOBAL $db;
-				try
-		{
-		    
-		  $res = $db->query("SELECT   Id,nomeCliente, telefoneCliente, email, login, senha, tipo FROM cliente
-		  					WHERE login = '".$login."'");
-
-		  return $res;
-
-		// SE HOUVER O OBJETO DE CONEXÃO COM O BANCO
-		} catch (PDOException $e) {
-		  //IMPRIME O ERRO
-		  print "Erro!: " .$e->getMessage() . "<br />";
-		  // MORRE
-		  die();
-			}
-		}//fecha metodo
-	function excluirPessoa($id_pessoa) 
-{
-		GLOBAL $db;
-			try
-	{
-	    
-	  $res = $db->exec("DELETE FROM	     tb_pessoa
-	  					WHERE id_pessoa = ".$id_pessoa."
-	  					");
-	  return $res;
-
-	// SE HOUVER O OBJETO DE CONEXÃO COM O BANCO
-	} catch (PDOException $e) {
-	  //IMPRIME O ERRO
-	  print "Erro!: " .$e->getMessage() . "<br />";
-	  // MORRE
-	  die();
-		}
 	}//fecha metodo
 
-} // final da classe pessoa
+	
