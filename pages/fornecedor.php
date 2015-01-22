@@ -1,6 +1,6 @@
-	<h1>Prestador de ServiÃ§os</h1>
+	<h1>Prestador de Serviços</h1>
 
-	<p>ExplicaÃ§Ã£o do cadastro</p>
+	<p>Explicação do cadastro</p>
 
 
 		<form name="frmCadastraVeiculo" method="POST" action="">
@@ -36,7 +36,7 @@
 				</tr>
 				<tr>
 					<td align=right>*Numero</td>
-					<td><input type="text" name="nÂº" id="nÂº" value="" /></td>
+					<td><input type="text" name="nº" id="nº" value="" /></td>
 				</tr>
 				<tr>
 					<td align=right>*Bairro</td>
@@ -67,7 +67,7 @@
 					<td><input type="text" name="ie" id="ie" value="" /></td>
 				</tr>
 				<tr>
-					<td align=right>*ServiÃ§os</td>
+					<td align=right>*Serviços</td>
 					<td><input type="text" name="servicos" id="servicos" value="" /></td>
 				</tr>
 
@@ -86,7 +86,7 @@
 				<tr>
 					<td colspan=2 align=center>
 	<input type='checkbox' name='concordaTermos' id='concordaTermos' value='Sim' /> 
-	* Concordo com os Termos de ServiÃ§o e a PolÃ­tica de Privacidade.
+	* Concordo com os Termos de Serviço e a Política de Privacidade.
 					</td>
 				</tr>						
 				<tr>

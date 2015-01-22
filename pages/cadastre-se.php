@@ -18,7 +18,7 @@ if ($_POST['cadastrar'] == 'Cadastrar') {
 
 	<h1>Cliente</h1>
 
-	<p>FaÃ§a seu cadastro</p>
+	<p>Faça seu cadastro</p>
 
 
 		<form name="frmCadastraVeiculo" method="POST" action="">
@@ -51,7 +51,7 @@ if ($_POST['cadastrar'] == 'Cadastrar') {
 				<tr>
 					<td colspan=2 align=center>
 	<input type='checkbox' name='concordaTermos' id='concordaTermos' value='Sim' /> 
-	* Concordo com os Termos de ServiÃ§o e a PolÃ­tica de Privacidade.
+	* Concordo com os Termos de Serviço e a Política de Privacidade.
 					</td>
 				</tr>						
 				<tr>
@@ -76,9 +76,9 @@ if ($_POST['cadastrar'] == 'Cadastrar') {
 <div id="boxCadastre-se">
 
 
-	<h1>Cliente</h1>
+	<h1>Prestador de Serviços</h1>
 
-	<p>FaÃ§a seu cadastro</p>
+	<p>Faça seu cadastro</p>
 
 
 		<form name="frmCadastraVeiculo" method="POST" action="">
@@ -145,11 +145,11 @@ if ($_POST['cadastrar'] == 'Cadastrar') {
 					<td><input type="text" name="rgie" id="rgie" value="" /></td>
 				</tr>
 				<tr>
-					<td align=right>*CodigoSeguranÃ§a</td>
+					<td align=right>*CodigoSegurança</td>
 					<td><input type="text" name="codigoseguranca" id="codigoseguranca" value="" /></td>
 				</tr>
 				<tr>
-					<td align=right>*CodigoSeguranÃ§aBox</td>
+					<td align=right>*CodigoSegurançaBox</td>
 					<td><input type="text" name="codigosegurancabox" id="codigosegurancabox" value="" /></td>
 				</tr>
 				<tr>
@@ -183,7 +183,7 @@ if ($_POST['cadastrar'] == 'Cadastrar') {
 				<tr>
 					<td colspan=2 align=center>
 	<input type='checkbox' name='concordaTermos' id='concordaTermos' value='Sim' /> 
-	* Concordo com os Termos de ServiÃ§o e a PolÃ­tica de Privacidade.
+	* Concordo com os Termos de Serviço e a Política de Privacidade.
 					</td>
 				</tr>						
 				<tr>
