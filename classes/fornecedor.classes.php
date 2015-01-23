@@ -244,23 +244,3 @@ class Fornecedor
 		//function gravaNoBanco() {}
 
 
-		function getfornecedor() 
-	{
-			GLOBAL $db;
-				try
-		{
-		    
-		  $res = $db->query("SELECT Id,nome, telefone, celular, email, site, cep, logradouro, numero, bairro, cidade, estado, latitude, longitude, cpf_cnpj, ie, login, senha, tipo FROM fornecedor");
-		  return $res;
-
-		   // ENCERRA O OBJETO DE CONEXÃO COM O BANCO
-		// SE HOUVER O OBJETO DE CONEXÃO COM O BANCO
-		} catch (PDOException $e) {
-		  //IMPRIME O ERRO
-		  print "Erro!: " .$e->getMessage() . "<br />";
-		  // MORRE
-		  die();
-			}
-	}//fecha metodo
-
-	
