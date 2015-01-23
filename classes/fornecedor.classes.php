@@ -1,43 +1,34 @@
 <?php
 class Fornecedor
 {
-	public $nome;
-	public $telefone;
-	public $celular;
-	public $email;
-	public $site;
-	public $cep;
-	public $logradouro;
-	public $numero;
-	public $bairro;
-	public $cidade;
-	public $estado;
-	public $latitude;
-	public $longitude;
-	public $cef_cnpj;
-	public $ie;
-	public $servicos;
-	public $login;
-	public $senha;
-	public $tipo;
+	private $nome;
+	private $telefone;
+	private $celular;
+	private $email;
+	private $site;
+	private $cep;
+	private $logradouro;
+	private $numero;
+	private $bairro;
+	private $cidade;
+	private $estado;
+	private $latitude;
+	private $longitude;
+	private $cef_cnpj;
+	private $ie;
+	private $servicos;
+	private $login;
+	private $senha;
+	private $tipo;
 
-	function setNome($nome) 
-	{
-		$this ->nome = $nome;
-		}
-	function setTelefone($telefone) 
-	{
-		$this ->telefone = $telefone;
-		}
+	function setNome($nome) {$this ->nome = $nome;}
+	function setTelefonevate($telefone) {$this ->telefone = $telefone;}
 
-	function setCelular($celular) 
-	{
-		$this ->celular = $celular;
+	function setCelular($celular) {$this ->celular = $celular;}
 	
-	function setEmail($email) 
-	{
-		$this ->email = $email;
-			}	
+	
+	function setEmail($email) {	$this ->email = $email;	}	
+
 	function setSite($site) 
 	{
 		$this ->site = $site;
@@ -69,7 +60,7 @@ class Fornecedor
 	function setLatitude($latitude) 
 	{
 		$this ->latitude = $latitude;
-			}
+	}
 	function setLongitude($longitude) 
 	{
 		$this ->longitude = $longitude;
@@ -194,7 +185,7 @@ class Fornecedor
 
  // FUNÇÃO INSERIR NO BANCO DE DADOS  
 
-	function setDB($id_cliente = null) {
+	function setDB($id_fornecedor = null) {
 			GLOBAL $db;
 
 
@@ -244,3 +235,23 @@ class Fornecedor
 		//function gravaNoBanco() {}
 
 
+		function getfornecedor() 
+	{
+			GLOBAL $db;
+				try
+		{
+		    
+		  $res = $db->query("SELECT Id,nome, telefone, celular, email, site, cep, logradouro, numero, bairro, cidade, estado, latitude, longitude, cpf_cnpj, ie, login, senha, tipo FROM fornecedor");
+		  return $res;
+
+		   // ENCERRA O OBJETO DE CONEXÃO COM O BANCO
+		// SE HOUVER O OBJETO DE CONEXÃO COM O BANCO
+		} catch (PDOException $e) {
+		  //IMPRIME O ERRO
+		  print "Erro!: " .$e->getMessage() . "<br />";
+		  // MORRE
+		  die();
+			}
+	}//fecha metodo
+
+	
