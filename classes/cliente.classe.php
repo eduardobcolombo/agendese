@@ -96,6 +96,7 @@ class Cliente
 		    if ($id_cliente == null) {
 	 		 			  $res = $db->exec("INSERT INTO cliente (nomeCliente, telefoneCliente, email, login, senha, tipo)
 		                                VALUES    ('".$this->nomeCliente."','".$this->telefoneCliente."','".$this->email."','".$this->login."', '".$this->senha."','".$this->tipo."'");
+		                                VALUES    ('".$this->nomeCliente."','".$this->telefoneCliente."','".$this->email."','".$this->login."', '".$this->senha."','".$this->tipo."')");
 		// SE HOUVER O OBJETO DE CONEXÃO COM O BANCO
 		} else {
 			$res = $db->exec("UPDATE cliente  SET 
