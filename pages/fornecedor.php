@@ -1,6 +1,34 @@
-	<h1>Prestador de Serviços</h1>
+<?php
 
-	<p>Explicação do cadastro</p>
+if ($_POST['cadastrar'] == 'Cadastrar') 
+{
+	$objFornecedor->setNome($_POST["nome"]);
+	$objFornecedor->setTelefone($_POST["telefone"]);
+	$objFornecedor->setCelular($_POST["celular"]);
+	$objFornecedor->setEmail($_POST["email"]);
+	$objFornecedor->setSite($_POST["site"]);
+	$objFornecedor->setCep($_POST["cep"]);
+	$objFornecedor->setLogradouro($_POST["logradouro"]);
+	$objFornecedor->setNumero($_POST["numero"]);
+	$objFornecedor->setBairro($_POST["bairro"]);
+	$objFornecedor->setCidade($_POST["cidade"]);
+	$objFornecedor->setEstado($_POST["estado"]);
+	$objFornecedor->setLatitude($_POST["latitude"]);
+	$objFornecedor->setLongitude($_POST["longitude"]);
+	$objFornecedor->setCpf_cnpj($_POST["cpf_cnpj"]);
+	$objFornecedor->setIe($_POST["ie"]);
+	$objFornecedor->setServicos($_POST["servicos"]);
+	$objFornecedor->setLogin($_POST["login"]);
+	$objFornecedor->setSenha($_POST["senha"]);
+	$objFornecedor->setTipo("cliente");
+	$objFornecedor->setDB();
+}
+
+?>
+
+	<h1>Prestador de ServiÃ§os</h1>
+
+	<p>ExplicaÃ§Ã£o do cadastro</p>
 
 
 		<form name="frmCadastraVeiculo" method="POST" action="">
@@ -36,7 +64,7 @@
 				</tr>
 				<tr>
 					<td align=right>*Numero</td>
-					<td><input type="text" name="nº" id="nº" value="" /></td>
+					<td><input type="text" name="nÂº" id="nÂº" value="" /></td>
 				</tr>
 				<tr>
 					<td align=right>*Bairro</td>
@@ -67,7 +95,7 @@
 					<td><input type="text" name="ie" id="ie" value="" /></td>
 				</tr>
 				<tr>
-					<td align=right>*Serviços</td>
+					<td align=right>*ServiÃ§os</td>
 					<td><input type="text" name="servicos" id="servicos" value="" /></td>
 				</tr>
 
@@ -86,15 +114,25 @@
 				<tr>
 					<td colspan=2 align=center>
 	<input type='checkbox' name='concordaTermos' id='concordaTermos' value='Sim' /> 
-	* Concordo com os Termos de Serviço e a Política de Privacidade.
+	* Concordo com os Termos de ServiÃ§o e a PolÃ­tica de Privacidade.
 					</td>
 				</tr>						
 				<tr>
 
 					<td colspan=2 align=center><input type="submit"  name="cadastrar" value="Cadastrar"/></td>
 				</tr>
+
 			</table>
 
 		</form>
 </div>	
 
+
+<div id="boxImagem">
+	<img src="images/esmalte.jpg" />
+
+
+</div>	
+
+<div class="clear">
+</div>
