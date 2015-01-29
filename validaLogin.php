@@ -24,7 +24,7 @@ location.href='http://localhost/agendese/';
 		$_SESSION['nomeCliente'] = $linha->nomeCliente;
 		$_SESSION['login'] = $linha->login;
 		$_SESSION['tipo'] = $linha->tipo;
-
+		$_SESSION['id'] = $linha->Id;
 
 
 
