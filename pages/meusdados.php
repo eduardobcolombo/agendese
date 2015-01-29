@@ -7,8 +7,8 @@ if ($_POST['Alterar'] == 'Alterar') {
 }
 
 
-	$cliente =$objCliente->getClienteByLogin($_SESSION['login']);
-
+	$cliente = $objCliente->getClienteByLogin($_SESSION['login']);
+	$cliente = $cliente->fetch(PDO::FETCH_OBJ);
 
 
 
