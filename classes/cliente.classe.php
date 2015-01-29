@@ -179,5 +179,38 @@ class Cliente
 		}
 	}//fecha metodo
 
+
+
+
+	// CRIADO POR Eduardo em 2015-01-29
+	function getClientePesquisa($filtro) 
+	{
+			GLOBAL $db;
+				try
+		{
+		    
+		  $res = $db->query("SELECT Id, nomeCliente 
+		  	 				   FROM cliente
+		  	 				  WHERE nomeCliente LIKE '%".$filtro."%'
+
+		  	 			   ORDER BY nomeCliente ASC
+
+		  	 				   ");
+		  return $res;
+
+		   // ENCERRA O OBJETO DE CONEXÃO COM O BANCO
+		// SE HOUVER O OBJETO DE CONEXÃO COM O BANCO
+		} catch (PDOException $e) {
+		  //IMPRIME O ERRO
+		  print "Erro!: " .$e->getMessage() . "<br />";
+		  // MORRE
+		  die();
+			}
+		}//fecha metodo
+
+
+
+
+
 } // final da classe pessoa
 

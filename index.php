@@ -72,9 +72,9 @@ if (!$_SESSION['logado']) { ?>
           </ul>
 <?php  }  ?>
 
-          <form class="navbar-form navbar-left" role="search">
+          <form class="navbar-form navbar-left" role="search" name='a' id='a' method="POST" action="http://localhost/agendese/?page=pesquisa">
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Search">
+              <input type="text" class="form-control" placeholder="Digite sua pesquisa" id="filtro" name="filtro">
             </div>
             <button type="submit" class="btn btn-default">Pesquisa</button>
           </form>
