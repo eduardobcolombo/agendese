@@ -120,7 +120,7 @@ if ($_POST['cadastrar'] == 'Cadastrar')
 
 				<tr>
 					<td align=right>*Senha</td>
-					<td><input type="text" name="login" id="login" value="" /></td>
+					<td><input type="password" name="login" id="login" value="" /></td>
 				</tr>
 				<tr>
 					<td align=right>*Confirmar Senha</td>
