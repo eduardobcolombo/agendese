@@ -102,9 +102,7 @@ class Cliente
 		                                  nomeCliente = '".$this->nomeCliente."',
 		                                  telefoneCliente = '".$this->telefoneCliente."',
 		                                  email = '".$this->email."',
-		                                  login = '".$this->login."',
-		                                  senha = '".$this->senha."'
-		                                  tipo = '".$this->tipo."'
+		                                  
 		                                  WHERE id = '".$id_cliente."' ");
 
 	#######
