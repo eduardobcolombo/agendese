@@ -6,7 +6,7 @@
 #boxCadastre-se{
 	width:30%;
 	float:left;
-	border:2 px;
+	border:2px;
 }
 table, tr, td{
 	background: #CC33CC;
@@ -28,4 +28,13 @@ body{
 	background: #FAB7C3;
 	border:0px;
 	
+}
+
+#boxFornecedor{
+	width:30%;
+	float:left;
+	border:2px;
+}
+#boxImagem1{
+
 }

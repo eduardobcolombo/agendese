@@ -25,7 +25,7 @@ if ($_POST['cadastrar'] == 'Cadastrar')
 }
 
 ?>
-
+	<div id="boxFornecedor">
 	<h1>Prestador de Serviços</h1>
 
 	<p>Explicação do cadastro</p>
@@ -128,7 +128,7 @@ if ($_POST['cadastrar'] == 'Cadastrar')
 </div>	
 
 
-<div id="boxImagem">
+<div id="boxImagem1">
 	<img src="images/esmalte.jpg" />
 
 
