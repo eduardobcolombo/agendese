@@ -17,13 +17,16 @@ class Fornecedor
 	private $cef_cnpj;
 	private $ie;
 	private $servicos;
-	private $login;
 	private $senha;
-	private $tipo;
+	private $confirmaSenha;
+	private $manicure
+	private $cabelereiro
+	private $massoterapeuta
+	private $fisioterapeuta
 
 	/* OS SETS*/
 	function setNome($nome) {$this ->nome = $nome;}
-	function setTelefonevate($telefone) {$this ->telefone = $telefone;}
+	function setTelefone($telefone) {$this ->telefone = $telefone;}
 	function setCelular($celular) {$this ->celular = $celular;}	
 	function setEmail($email) {$this ->email = $email;}	
 	function setSite($site) {$this ->site = $site;}
@@ -38,6 +41,12 @@ class Fornecedor
 	function setCpf_cnpj($cpf_cnpj) {$this ->cpf_cnpj = $cpf_cnpj;}
 	function setIe($ie) {$this ->ie = $ie;}
 	function setServicos($servicos) {$this ->servicos = $servicos;}
+	function setLogin($senha){$this ->senha = md5($senha);}
+	function setSenha($comfirmaSenha){$this ->comfirmaSenha = md5($comfirmaSenha);}
+	function setManicure($setManicure){$this ->manicure = $manicure;}
+	function setCabelereiro($cabelereiro){$this ->cabelereiro = $cabelereiro;}
+	function setMassoterapeutia($massoterapeuta){$this ->massoterapeuta = $massoterapeuta;}
+	function setFisioterapeuta($fisioterapeuta){$this ->fisioterapeuta = $fisioterapeuta;}
 
 	/* OS GETS*/
 	function getNome($nome) {return $this ->nome;}
@@ -56,38 +65,14 @@ class Fornecedor
 	function getCpf_cnpj($cpf_cnpj) {return $this ->cpf_cnpj;}
 	function getIe($ie) {return $this ->ie;}
 	function getServicos($servicos) {return $this ->servicos;}
-
-
-	function setLogin($login) 
-	{
-		$this ->login = $login;
-			}
-	function setSenha($senha) 
-	{
-		$this ->senha = md5($senha);
-			}
-	function setTipo($tipo) 
-	{
-		$this ->tipo = $tipo;
-			}			
-			}
-	function getEmail() 
-	{
-		return $this ->email;
-			}
-	function getLogin() 
-	{
-		return $this ->login;
-			}
-	function getSenha() 
-	{
-		return $this ->senha;
-			}			
-	function getTipo() 
-	{
-		return $this ->tipo;
-			}		
-
+	function getEmail(){return $this ->email;}
+	function getLogin(){return $this ->senha;}
+	function getSenha(){return $this ->confirmaSenha;}
+	function getManicure(){return $this ->manicure;}
+	function getCabelereiro(){return $this ->cabelereiro;}
+	function getMassoterapeuta(){return $this ->massoterapeuta;}
+	function getFisioterapeuta(){return $this ->fisioterapeuta;}
+	
  // FUNǇÃO INSERIR NO BANCO DE DADOS  
 
 	function setDB($id_fornecedor = null) {
@@ -101,8 +86,8 @@ class Fornecedor
 	try
 		{
 		    if ($id_fornecedor == null) {
-	 		 			  $res = $db->exec("INSERT INTO fornecedor (nome, telefone, celular, email, site, cep, logradouro, numero, bairro, cidade, estado, latitude, longitude, cpf_cnpj, ie, login, senha, tipo)
-		                                VALUES    ('".$this->nomeCliente."','".$this->telefoneCliente."','".$this->email."','".$this->login."', '".$this->senha."','".$this->tipo."'");
+	 		 			  $res = $db->exec("INSERT INTO fornecedor (nome, telefone, celular, email, site, cep, logradouro, numero, bairro, cidade, estado, latitude, longitude, cpf_cnpj, ie, senha, comfirmaSenha, manicure, cabelereiro, massoterapeuta, fisioterapeuta)
+		                                VALUES    ('".$this->nomeCliente."','".$this->telefoneCliente."','".$this->email."','".$this->senha."', '".$this->comfirmaSenha."','");
 		// SE HOUVER O OBJETO DE CONEXÃO COM O BANCO
 		} else {
 			$res = $db->exec("UPDATE fornecedor  SET 
@@ -121,9 +106,12 @@ class Fornecedor
 		                                  longitude = '".$this->longitude."',
 		                                  cpf_cnpj = '".$this->cpf_cnpj."',
 		                                  ie = '".$this->ie."',
-		                                   login= '".$this->login."',
-		                                  senha = '".$this->senha."'
-		                                  tipo = '".$this->tipo."'
+		                                  senha= '".$this->senha."',
+		                                  confirmaSenha = '".$this->confirmaSenha."',
+		                                  manicure = '".$this->manicure"',
+		                                  cabelereiro = '"$this->cabelereiro"',
+		                                  massoterapeuta = '"$this->massoterapeuta"',
+		                                  fisioterapeuta = '"$this->fisioterapeuta"',
 		                                  WHERE id = '".$id_cliente."' ");
 
 	#######
@@ -146,7 +134,7 @@ class Fornecedor
 				try
 		{
 		    
-		  $res = $db->query("SELECT Id,nome, telefone, celular, email, site, cep, logradouro, numero, bairro, cidade, estado, latitude, longitude, cpf_cnpj, ie, login, senha, tipo FROM fornecedor");
+		  $res = $db->query("SELECT Id,nome, telefone, celular, email, site, cep, logradouro, numero, bairro, cidade, estado, latitude, longitude, cpf_cnpj, ie, senha, confirmaSenha, cabelereiro, manicure, massoterapeuta, fisioterapeuta FROM fornecedor");
 		  return $res;
 
 		   // ENCERRA O OBJETO DE CONEXÃO COM O BANCO

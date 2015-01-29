@@ -18,17 +18,16 @@ if ($_POST['cadastrar'] == 'Cadastrar')
 	$objFornecedor->setCpf_cnpj($_POST["cpf_cnpj"]);
 	$objFornecedor->setIe($_POST["ie"]);
 	$objFornecedor->setServicos($_POST["servicos"]);
-	$objFornecedor->setLogin($_POST["login"]);
-	$objFornecedor->setSenha($_POST["senha"]);
-	$objFornecedor->setTipo("cliente");
+	$objFornecedor->setLogin($_POST["senha"]);
+	$objFornecedor->setSenha($_POST["confirmaSenha"]);
 	$objFornecedor->setDB();
 }
 
 ?>
 	<div id="boxFornecedor">
-	<h1>Prestador de ServiÃ§os</h1>
+	<h1>Prestador de Serviços</h1>
 
-	<p>ExplicaÃ§Ã£o do cadastro</p>
+	<p>Explicação do cadastro</p>
 
 
 		<form name="frmCadastraVeiculo" method="POST" action="">
@@ -64,7 +63,7 @@ if ($_POST['cadastrar'] == 'Cadastrar')
 				</tr>
 				<tr>
 					<td align=right>*Numero</td>
-					<td><input type="text" name="nÂº" id="nÂº" value="" /></td>
+					<td><input type="text" name="nº" id="nº" value="" /></td>
 				</tr>
 				<tr>
 					<td align=right>*Bairro</td>
@@ -95,17 +94,33 @@ if ($_POST['cadastrar'] == 'Cadastrar')
 					<td><input type="text" name="ie" id="ie" value="" /></td>
 				</tr>
 				<tr>
-					<td align=right>*ServiÃ§os</td>
+					<td align=right>*Serviços</td>
 					<td><input type="text" name="servicos" id="servicos" value="" /></td>
 				</tr>
+				<tr>
+					<td colspan=2 align=left>
+	<input type='checkbox' name='manicure' id='manicure' value="" /> 
+	Manicure
+				</td>
+				<tr>
+					<td colspan=2 align=left>
+	<input type='checkbox' name='cabelereiro' id='cabelereiro' value="" /> 
+	Cabelereiro
+				</td>
+				<tr>
+					<td colspan=2 align=left>
+	<input type='checkbox' name='massoterapeuta' id='massoterapeuta' value="" /> 
+	Massoterapeuta
+				</td>
+				<tr>
+					<td colspan=2 align=left>
+	<input type='checkbox' name='fisioterapeuta' id='fisioterapeuta' value="" /> 
+	Fisioterapeuta
+				</td>
 
 				<tr>
-					<td align=right>*Login</td>
-					<td><input type="text" name="login" id="login" value="" /></td>
-				</tr>
-				<tr>
 					<td align=right>*Senha</td>
-					<td><input type="password" name="senha" id="senha" value="" /></td>
+					<td><input type="text" name="login" id="login" value="" /></td>
 				</tr>
 				<tr>
 					<td align=right>*Confirmar Senha</td>
@@ -114,7 +129,7 @@ if ($_POST['cadastrar'] == 'Cadastrar')
 				<tr>
 					<td colspan=2 align=center>
 	<input type='checkbox' name='concordaTermos' id='concordaTermos' value='Sim' /> 
-	* Concordo com os Termos de ServiÃ§o e a PolÃ­tica de Privacidade.
+	* Concordo com os Termos de Serviço e a Política de Privacidade.
 					</td>
 				</tr>						
 				<tr>
