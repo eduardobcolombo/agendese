@@ -95,10 +95,6 @@ class Cliente
 		{
 		    if ($id_cliente == null) {
 	 		 			  $res = $db->exec("INSERT INTO cliente (nomeCliente, telefoneCliente, email, login, senha, tipo)
-<<<<<<< HEAD
-		                                VALUES    ('".$this->nomeCliente."','".$this->telefoneCliente."','".$this->email."','".$this->login."', '".$this->senha."','".$this->tipo."'");
-=======
->>>>>>> origin/master
 		                                VALUES    ('".$this->nomeCliente."','".$this->telefoneCliente."','".$this->email."','".$this->login."', '".$this->senha."','".$this->tipo."')");
 		// SE HOUVER O OBJETO DE CONEXÃO COM O BANCO
 		} else {
