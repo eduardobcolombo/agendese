@@ -1,3 +1,31 @@
+<?php
+
+if ($_POST['cadastrar'] == 'Cadastrar') 
+{
+	$objFornecedor->setNome($_POST["nome"]);
+	$objFornecedor->setTelefone($_POST["telefone"]);
+	$objFornecedor->setCelular($_POST["celular"]);
+	$objFornecedor->setEmail($_POST["email"]);
+	$objFornecedor->setSite($_POST["site"]);
+	$objFornecedor->setCep($_POST["cep"]);
+	$objFornecedor->setLogradouro($_POST["logradouro"]);
+	$objFornecedor->setNumero($_POST["numero"]);
+	$objFornecedor->setBairro($_POST["bairro"]);
+	$objFornecedor->setCidade($_POST["cidade"]);
+	$objFornecedor->setEstado($_POST["estado"]);
+	$objFornecedor->setLatitude($_POST["latitude"]);
+	$objFornecedor->setLongitude($_POST["longitude"]);
+	$objFornecedor->setCpf_cnpj($_POST["cpf_cnpj"]);
+	$objFornecedor->setIe($_POST["ie"]);
+	$objFornecedor->setServicos($_POST["servicos"]);
+	$objFornecedor->setLogin($_POST["login"]);
+	$objFornecedor->setSenha($_POST["senha"]);
+	$objFornecedor->setTipo("cliente");
+	$objFornecedor->setDB();
+}
+
+?>
+
 	<h1>Prestador de Serviços</h1>
 
 	<p>Explicação do cadastro</p>
@@ -93,8 +121,18 @@
 
 					<td colspan=2 align=center><input type="submit"  name="cadastrar" value="Cadastrar"/></td>
 				</tr>
+
 			</table>
 
 		</form>
 </div>	
 
+
+<div id="boxImagem">
+	<img src="images/esmalte.jpg" />
+
+
+</div>	
+
+<div class="clear">
+</div>
