@@ -66,7 +66,7 @@ if (!$_SESSION['logado']) { ?>
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Cadastre-se<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="http://localhost/agendese/?page=cadastre-se">Cliente</a></li>
-                <li><a href="http://localhost/agendese/?page=cadastre-se">Prestador de Serviços</a></li>
+                <li><a href="http://localhost/agendese/?page=fornecedor">Prestador de Serviços</a></li>
               </ul>
             </li>
           </ul>
