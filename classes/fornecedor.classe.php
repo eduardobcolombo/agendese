@@ -45,7 +45,7 @@ class Fornecedor
 	function setSenha($comfirmaSenha){$this ->comfirmaSenha = md5($comfirmaSenha);}
 	function setManicure($setManicure){$this ->manicure = $manicure;}
 	function setCabelereiro($cabelereiro){$this ->cabelereiro = $cabelereiro;}
-	function setMassoterapeutia($massoterapeuta){$this ->massoterapeuta = $massoterapeuta;}
+	function setMassoterapeuta($massoterapeuta){$this ->massoterapeuta = $massoterapeuta;}
 	function setFisioterapeuta($fisioterapeuta){$this ->fisioterapeuta = $fisioterapeuta;}
 
 	/* OS GETS*/
@@ -65,8 +65,7 @@ class Fornecedor
 	function getCpf_cnpj($cpf_cnpj) {return $this ->cpf_cnpj;}
 	function getIe($ie) {return $this ->ie;}
 	function getServicos($servicos) {return $this ->servicos;}
-	function getEmail($email){return $this ->email;}
-	function getLogin($senha]){return $this ->senha;}
+	function getLogin($senha){return $this ->senha;}
 	function getSenha($confirmaSenha){return $this ->confirmaSenha;}
 	function getManicure($manicure){return $this ->manicure;}
 	function getCabelereiro($cabelereiro){return $this ->cabelereiro;}
@@ -87,7 +86,7 @@ class Fornecedor
 		{
 		    if ($id_fornecedor == null) {
 	 		 			  $res = $db->exec("INSERT INTO fornecedor (nome, telefone, celular, email, site, cep, logradouro, numero, bairro, cidade, estado, latitude, longitude, cpf_cnpj, ie, senha, comfirmaSenha, manicure, cabelereiro, massoterapeuta, fisioterapeuta)
-		                                VALUES    ('".$this->nomeCliente."','".$this->telefoneCliente."','".$this->email."','".$this->senha."', '".$this->comfirmaSenha."','");
+		                                VALUES    ('".$this->nomeCliente."','".$this->telefoneCliente."','".$this->email."','".$this->senha."', '".$this->comfirmaSenha."', '".$this->manicure."', '".$this->cabelereiro."', '".$this->massoterapeuta."', '".$this->fisioterapeuta."')";
 		// SE HOUVER O OBJETO DE CONEXÃO COM O BANCO
 		} else {
 			$res = $db->exec("UPDATE fornecedor  SET 
@@ -108,10 +107,10 @@ class Fornecedor
 		                                  ie = '".$this->ie."',
 		                                  senha= '".$this->senha."',
 		                                  confirmaSenha = '".$this->confirmaSenha."',
-		                                  manicure = '".$this->manicure"',
-		                                  cabelereiro = '"$this->cabelereiro"',
-		                                  massoterapeuta = '"$this->massoterapeuta"',
-		                                  fisioterapeuta = '"$this->fisioterapeuta"',
+		                                  manicure = '".$this->manicure."',
+		                                  cabelereiro = '".$this->cabelereiro."',
+		                                  massoterapeuta = '".$this->massoterapeuta."',
+		                                  fisioterapeuta = '".$this->fisioterapeuta."'
 		                                  WHERE id = '".$id_cliente."' ");
 
 	#######
@@ -147,4 +146,4 @@ class Fornecedor
 			}
 	}//fecha metodo
 
-	
+}

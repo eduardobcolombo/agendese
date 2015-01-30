@@ -17,5 +17,5 @@ try
 include("classes/cliente.classe.php");
 	$objCliente = new Cliente();
 	include("classes/fornecedor.classe.php");
-	$objfornecedor = new Fornecedor();
+	$objFornecedor = new Fornecedor();
 ?>
