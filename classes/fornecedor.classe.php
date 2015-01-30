@@ -1,29 +1,29 @@
 <?php
 class Fornecedor
 {
-	private $nome;
-	private $telefone;
-	private $celular;
-	private $email;
-	private $site;
-	private $cep;
-	private $logradouro;
-	private $numero;
-	private $bairro;
-	private $cidade;
-	private $estado;
-	private $latitude;
-	private $longitude;
-	private $cef_cnpj;
-	private $ie;
-	private $servicos;
-	private $senha;
-	private $confirmaSenha;
-	private $manicure;
+	public $nome;
+	public $telefone;
+	public $celular;
+	public $email;
+	public $site;
+	public $cep;
+	public $logradouro;
+	public $numero;
+	public $bairro;
+	public $cidade;
+	public $estado;
+	public $latitude;
+	public $longitude;
+	public $cef_cnpj;
+	public $ie;
+	public $servicos;
+	public $senha;
+	public $confirmaSenha;
+/*	private $manicure;
 	private $cabelereiro;
 	private $massoterapeuta;
 	private $fisioterapeuta;
-
+*/
 	/* OS SETS*/
 	function setNome($nome) {$this ->nome = $nome;}
 	function setTelefone($telefone) {$this ->telefone = $telefone;}
@@ -32,7 +32,7 @@ class Fornecedor
 	function setSite($site) {$this ->site = $site;}
 	function setCep($cep) {$this ->cep = $cep;}	
 	function setLogradouro($logradouro) {$this ->logradouro = $logradouro;}
-	function setNumero($nº) {$this ->nº = $nº;}
+	function setNumero($numero) {$this ->numero = $numero;}
 	function setBairro($bairro) {$this ->bairro = $bairro;}
 	function setCidade($cidade) {$this ->cidade = $cidade;}
 	function setEstado($estado) {$this ->estado = $estado;}
@@ -41,13 +41,13 @@ class Fornecedor
 	function setCpf_cnpj($cpf_cnpj) {$this ->cpf_cnpj = $cpf_cnpj;}
 	function setIe($ie) {$this ->ie = $ie;}
 	function setServicos($servicos) {$this ->servicos = $servicos;}
-	function setLogin($senha){$this ->senha = md5($senha);}
-	function setSenha($comfirmaSenha){$this ->comfirmaSenha = md5($comfirmaSenha);}
-	function setManicure($setManicure){$this ->manicure = $manicure;}
+	function setSenha($senha){$this ->senha = md5($senha);}
+	function setConfirmaSenha($comfirmaSenha){$this ->comfirmaSenha = md5($comfirmaSenha);}
+/*	function setManicure($setManicure){$this ->manicure = $manicure;}
 	function setCabelereiro($cabelereiro){$this ->cabelereiro = $cabelereiro;}
 	function setMassoterapeuta($massoterapeuta){$this ->massoterapeuta = $massoterapeuta;}
 	function setFisioterapeuta($fisioterapeuta){$this ->fisioterapeuta = $fisioterapeuta;}
-
+*/
 	/* OS GETS*/
 	function getNome($nome) {return $this ->nome;}
 	function getTelefone($telefone) {return $this ->telefone;}
@@ -56,7 +56,7 @@ class Fornecedor
 	function getSite($site) {return $this ->site;}
 	function getCep($cep) {return $this ->cep;}
 	function getLogradouro($logradouro) {return $this ->logradouro;}
-	function getNumero($nº) {return $this ->nº;}
+	function getNumero($numero) {return $this ->numero;}
 	function getBairro($bairro) {return $this ->bairro;}
 	function getCidade($cidade) {return $this ->cidade;}
 	function getEstado($estado) {return $this ->estado;}
@@ -65,28 +65,25 @@ class Fornecedor
 	function getCpf_cnpj($cpf_cnpj) {return $this ->cpf_cnpj;}
 	function getIe($ie) {return $this ->ie;}
 	function getServicos($servicos) {return $this ->servicos;}
-	function getLogin($senha){return $this ->senha;}
-	function getSenha($confirmaSenha){return $this ->confirmaSenha;}
-	function getManicure($manicure){return $this ->manicure;}
+	function getSenha($senha){return $this ->senha;}
+	function getConfirmaSenha($confirmaSenha){return $this ->confirmaSenha;}
+/*	function getManicure($manicure){return $this ->manicure;}
 	function getCabelereiro($cabelereiro){return $this ->cabelereiro;}
 	function getMassoterapeuta($massoterapeuta){return $this ->massoterapeuta;}
 	function getFisioterapeuta($fisioterapeuta){return $this ->fisioterapeuta;}
-	
+*/	
+
+
  // FUNÇ‡ÃƒO INSERIR NO BANCO DE DADOS  
 
 	function setDB($id_fornecedor = null) {
 			GLOBAL $db;
 
-
-
-
-
-
-	try
+			try
 		{
 		    if ($id_fornecedor == null) {
-	 		 			  $res = $db->exec("INSERT INTO fornecedor (nome, telefone, celular, email, site, cep, logradouro, numero, bairro, cidade, estado, latitude, longitude, cpf_cnpj, ie, senha, comfirmaSenha, manicure, cabelereiro, massoterapeuta, fisioterapeuta)
-		                                VALUES    ('".$this->nomeCliente."','".$this->telefoneCliente."','".$this->email."','".$this->senha."', '".$this->comfirmaSenha."', '".$this->manicure."', '".$this->cabelereiro."', '".$this->massoterapeuta."', '".$this->fisioterapeuta."')";
+	 		 			  $res = $db->exec("INSERT INTO fornecedor (nome, telefone, celular, email, site, cep, logradouro, numero, bairro, cidade, estado, latitude, longitude, cpf_cnpj, ie, senha, comfirmaSenha/* manicure, cabelereiro, massoterapeuta, fisioterapeuta*/)
+		                                VALUES    ('".$this->nome."','".$this->telefone."','".$this->email."','".$this->celular."','".$this->site."','".$this->cep."','".$this->logradouro."','".$this->numero."','".$this->bairro."','".$this->cidade."','".$this->estado."','".$this->latitude."','".$this->longitude."','".$this->cpf_cnpj."','".$this->ie."','".$this->senha."', '".$this->comfirmaSenha."')");
 		// SE HOUVER O OBJETO DE CONEXÃƒO COM O BANCO
 		} else {
 			$res = $db->exec("UPDATE fornecedor  SET 
@@ -106,12 +103,8 @@ class Fornecedor
 		                                  cpf_cnpj = '".$this->cpf_cnpj."',
 		                                  ie = '".$this->ie."',
 		                                  senha= '".$this->senha."',
-		                                  confirmaSenha = '".$this->confirmaSenha."',
-		                                  manicure = '".$this->manicure."',
-		                                  cabelereiro = '".$this->cabelereiro."',
-		                                  massoterapeuta = '".$this->massoterapeuta."',
-		                                  fisioterapeuta = '".$this->fisioterapeuta."'
-		                                  WHERE id = '".$id_cliente."' ");
+		                                  confirmaSenha = '".$this->confirmaSenha."'
+		                                  WHERE id = '".$id_fornecedor."' ");
 
 	#######
 		} 
@@ -147,3 +140,4 @@ class Fornecedor
 	}//fecha metodo
 
 }
+?>

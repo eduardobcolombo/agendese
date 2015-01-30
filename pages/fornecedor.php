@@ -18,19 +18,24 @@ if ($_POST['cadastrar'] == 'Cadastrar')
 	$objFornecedor->setCpf_cnpj($_POST["cpf_cnpj"]);
 	$objFornecedor->setIe($_POST["ie"]);
 	$objFornecedor->setServicos($_POST["servicos"]);
-	$objFornecedor->setLogin($_POST["senha"]);
-	$objFornecedor->setSenha($_POST["confirmaSenha"]);
-	$objFornecedor->setDB();
+	$objFornecedor->setSenha($_POST["senha"]);
+	$objFornecedor->setConfirmaSenha($_POST["confirmaSenha"]);
+/*	$objFornecedor->setManicure($_POST["manicure"]);
+	$objFornecedor->setCabelereiro($_POST["cabelereiro"]);
+	$objFornecedor->setMassoterapeuta($_POST["massoterapeuta"]);
+	$objFornecedor->setFisioterapeuta($_POST["fisioterapeuta"]);
+*/	$objFornecedor->setDB();
 }
 
 ?>
+
 	<div id="boxFornecedor">
 	<h1>Prestador de Serviços</h1>
 
 	<p>Explicação do cadastro</p>
 
 
-		<form name="frmCadastraVeiculo" method="POST" action="">
+		<form name="frmCadastraFornecedor" method="POST" action="">
 
 			<table class="table">
 				<tr>
@@ -63,7 +68,7 @@ if ($_POST['cadastrar'] == 'Cadastrar')
 				</tr>
 				<tr>
 					<td align=right>*Numero</td>
-					<td><input type="text" name="nº" id="nº" value="" /></td>
+					<td><input type="text" name="numero" id="numero" value="" /></td>
 				</tr>
 				<tr>
 					<td align=right>*Bairro</td>
@@ -97,7 +102,7 @@ if ($_POST['cadastrar'] == 'Cadastrar')
 					<td align=right>*Serviços</td>
 					<td><input type="text" name="servicos" id="servicos" value="" /></td>
 				</tr>
-				<tr>
+		<!--		<tr>
 					<td colspan=2 align=left>
 	<input type='checkbox' name='manicure' id='manicure' value="" /> 
 	Manicure
@@ -117,10 +122,10 @@ if ($_POST['cadastrar'] == 'Cadastrar')
 	<input type='checkbox' name='fisioterapeuta' id='fisioterapeuta' value="" /> 
 	Fisioterapeuta
 				</td>
-
+		-->
 				<tr>
 					<td align=right>*Senha</td>
-					<td><input type="password" name="login" id="login" value="" /></td>
+					<td><input type="password" name="senha" id="senha" value="" /></td>
 				</tr>
 				<tr>
 					<td align=right>*Confirmar Senha</td>
