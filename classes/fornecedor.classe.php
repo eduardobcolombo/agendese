@@ -182,5 +182,34 @@ VALUES
 			}
 	}//fecha metodo
 
+function getFornecedorPesquisa($filtro)
+	{
+			GLOBAL $db;
+				try
+		{
+
+		    
+		  $res = $db->query("SELECT Id, nome, servicos, telefone, celular, site, logradouro, bairro, cidade, estado
+		  	 				   FROM fornecedor
+		  	 				  WHERE nome
+		  	 				   LIKE '%".$filtro."%'
+
+		  	 			   ORDER BY nome  ASC
+
+		  	 				   ");
+		  return $res;
+
+		   // ENCERRA O OBJETO DE CONEXÃO COM O BANCO
+		// SE HOUVER O OBJETO DE CONEXÃO COM O BANCO
+		} catch (PDOException $e) {
+		  //IMPRIME O ERRO
+		  print "Erro!: " .$e->getMessage() . "<br />";
+		  // MORRE
+		  die();
+			}
+		}//fecha metodo
+
+
+
 }
 ?>
