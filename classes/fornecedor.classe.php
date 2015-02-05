@@ -1,6 +1,7 @@
 <?php
 class Fornecedor
 {
+
 	public $nome;
 	public $telefone;
 	public $celular;
@@ -14,7 +15,7 @@ class Fornecedor
 	public $estado;
 	public $latitude;
 	public $longitude;
-	public $cef_cnpj;
+	public $cpf_cnpj;
 	public $ie;
 	public $servicos;
 	public $senha;
@@ -81,9 +82,51 @@ class Fornecedor
 
 			try
 		{
+
+
 		    if ($id_fornecedor == null) {
-	 		 			  $res = $db->exec("INSERT INTO fornecedor (nome, telefone, celular, email, site, cep, logradouro, numero, bairro, cidade, estado, latitude, longitude, cpf_cnpj, ie, senha, comfirmaSenha/* manicure, cabelereiro, massoterapeuta, fisioterapeuta*/)
-		                                VALUES    ('".$this->nome."','".$this->telefone."','".$this->email."','".$this->celular."','".$this->site."','".$this->cep."','".$this->logradouro."','".$this->numero."','".$this->bairro."','".$this->cidade."','".$this->estado."','".$this->latitude."','".$this->longitude."','".$this->cpf_cnpj."','".$this->ie."','".$this->senha."', '".$this->comfirmaSenha."')");
+	 		 			  $res = $db->exec("
+INSERT INTO fornecedor 
+(nome, 
+ telefone, 
+ celular, 
+ email, 
+ site, 
+ cep, 
+ logradouro, 
+ numero, 
+ bairro, 
+ cidade, 
+ estado, 
+ latitude, 
+ longitude, 
+ cpf_cnpj, 
+ ie, 
+ servicos, 
+ senha, 
+ confirmaSenha)
+VALUES    
+('".$this->nome."',
+ '".$this->telefone."',
+ '".$this->email."',
+ '".$this->celular."',
+ '".$this->site."',
+ '".$this->cep."',
+ '".$this->logradouro."',
+ '".$this->numero."',
+ '".$this->bairro."',
+ '".$this->cidade."',
+ '".$this->estado."',
+ '".$this->latitude."',
+ '".$this->longitude."',
+ '".$this->cpf_cnpj."',
+ '".$this->ie."',
+ '".$this->servicos."',
+ '".$this->senha."', 
+ '".$this->confirmaSenha."')");
+
+
+ 		 			  
 		// SE HOUVER O OBJETO DE CONEXÃO COM O BANCO
 		} else {
 			$res = $db->exec("UPDATE fornecedor  SET 
