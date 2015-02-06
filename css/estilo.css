@@ -38,3 +38,9 @@ body{
 #boxImagem1{
 
 }
+#boxContato{
+	width:30%;
+	float:left;
+	border:2px;
+
+}

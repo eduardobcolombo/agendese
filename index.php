@@ -78,6 +78,9 @@ if (!$_SESSION['logado']) { ?>
             </div>
             <button type="submit" class="btn btn-default">Pesquisa</button>
           </form>
+  <ul class="nav navbar-nav">
+   <li><a href="http://localhost/agendese/?page=contato">Contato</a></li>
+  </ul>
 
 <?php
 if ($_SESSION['tipo'] == "Administrador") { ?>
