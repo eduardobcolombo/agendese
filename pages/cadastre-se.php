@@ -79,7 +79,16 @@ if ($_POST['cadastrar'] == 'Cadastrar') {
           <img src="images/esmalte.jpg" class="img-responsive" alt="First slide">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Aagende o seu serviço.</h1>
+              <h1>Agende o seu serviço.</h1>
+              <p></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="images/imagem2.jpg" class="img-responsive" alt="Second slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Temos o profissional ideal para você.</h1>
               <p></p>
             </div>
           </div>
@@ -88,7 +97,7 @@ if ($_POST['cadastrar'] == 'Cadastrar') {
           <img src="images/imagem1.png" class="img-responsive" alt="Second slide">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Temos o profissional ideal para você.</h1>
+              <h1>Pronto para atender sua necessidade.</h1>
               <p></p>
             </div>
           </div>
