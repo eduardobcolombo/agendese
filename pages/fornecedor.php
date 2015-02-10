@@ -30,9 +30,9 @@ if ($_POST['cadastrar'] == 'Cadastrar')
 ?>
 
 	<div id="boxFornecedor">
-	<h1>Prestador de Servi√ßos</h1>
+	<h1>Prestador de ServiÁos</h1>
 
-	<p>Explica√ß√£o do cadastro</p>
+	<p>ExplicaÁ„o do cadastro</p>
 
 
 		<form name="frmCadastraFornecedor" method="POST" action="">
@@ -99,7 +99,7 @@ if ($_POST['cadastrar'] == 'Cadastrar')
 					<td><input type="text" name="ie" id="ie" value="" /></td>
 				</tr>
 				<tr>
-					<td align=right>*Servi√ßos</td>
+					<td align=right>*ServiÁos</td>
 					<td><input type="text" name="servicos" id="servicos" value="" /></td>
 				</tr>
 				<td align=left> 
@@ -111,13 +111,13 @@ if ($_POST['cadastrar'] == 'Cadastrar')
 <input type='checkbox' name='servico[]' id='servico[]' value="6" /> Auxiliar de Limpeza <br />
 <input type='checkbox' name='servico[]' id='servico[]' value="7" /> Jardineiro <br />
 <input type='checkbox' name='servico[]' id='servico[]' value="8" /> Prof de Idiomas <br />
-<input type='checkbox' name='servico[]' id='servico[]' value="9" /> Prof de Inform√°tica <br />
+<input type='checkbox' name='servico[]' id='servico[]' value="9" /> Prof de Inform·tica <br />
 <input type='checkbox' name='servico[]' id='servico[]' value="10" /> Pedreiro <br />
 <input type='checkbox' name='servico[]' id='servico[]' value="11" /> Eletrecista Predial <br />
 <input type='checkbox' name='servico[]' id='servico[]' value="12" /> Peeling <br />
 <input type='checkbox' name='servico[]' id='servico[]' value="13" /> Corretor de Imoveis <br />
 <input type='checkbox' name='servico[]' id='servico[]' value="14" /> Fisioterapeuta <br />
-<input type='checkbox' name='servico[]' id='servico[]' value="15" /> Tec. de Inform√°tica <br />
+<input type='checkbox' name='servico[]' id='servico[]' value="15" /> Tec. de Inform·tica <br />
 <input type='checkbox' name='servico[]' id='servico[]' value="16" /> Personal Trainer <br />
 <input type='checkbox' name='servico[]' id='servico[]' value="17" /> Enfermeira <br />
 					</td>
@@ -133,7 +133,7 @@ if ($_POST['cadastrar'] == 'Cadastrar')
 				<tr>
 					<td colspan=2 align=center>
 	<input type='checkbox' name='concordaTermos' id='concordaTermos' value='Sim' /> 
-	* Concordo com os Termos de Servi√ßo e a Pol√≠tica de Privacidade.
+	* Concordo com os Termos de ServiÁo e a PolÌtica de Privacidade.
 					</td>
 				</tr>						
 				<tr>
