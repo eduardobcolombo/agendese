@@ -9,13 +9,13 @@
 	border:2px;
 }
 table, tr, td{
-	background: #CC33CC;
+	background: #B0C4DE;
 	border:0px;
 }
 body{
 
 	color:black;
-	background: #FF99FF;
+	background: #CFCFCF;
 	margin: 0 auto;
 	text-align: center;
 }
@@ -25,7 +25,7 @@ body{
 
 }
 .panel{
-	background: #FAB7C3;
+	background: #AFEEEE;
 	border:0px;
 	
 }
@@ -43,5 +43,5 @@ body{
 	float:left;
 	border:2px;
 	margin:50px ;
-	background:#FF99FF;
+	background:#B0C4DE;
 }

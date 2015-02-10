@@ -28,8 +28,8 @@ if ($_POST['cadastrar'] == 'Cadastrar')
 }
 
 ?>
-
-	<div id="boxFornecedor">
+ 	<div id="boxFornecedor">
+ 		
 	<h1>Prestador de Serviços</h1>
 
 	<p>Explicação do cadastro</p>
