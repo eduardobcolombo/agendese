@@ -50,7 +50,7 @@
           <img src="images/email.jpg" class="img-responsive" alt="First slide">
           <div class="container">
             <div class="carousel-caption">
-              <h1></h1>
+              <h1>Enviando sua mensagem...</h1>
               <p></p>
             </div>
           </div>
@@ -59,7 +59,7 @@
           <img src="images/email1.jpg" class="img-responsive" alt="Second slide">
           <div class="container">
             <div class="carousel-caption">
-              <h1></h1>
+              <h1>Aguarde.</h1>
               <p></p>
             </div>
           </div>
