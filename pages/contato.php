@@ -47,7 +47,7 @@
       <!-- Indicators -->
          <div class="carousel-inner">
         <div class="item active">
-          <img src="images/email.jpg" class="img-responsive" alt="First slide">
+          <img src="images/baner contato.jpg" class="img-responsive" alt="First slide">
           <div class="container">
             <div class="carousel-caption">
               <h1>Enviando sua mensagem...</h1>
@@ -56,7 +56,7 @@
           </div>
         </div>
         <div class="item">
-          <img src="images/email1.jpg" class="img-responsive" alt="Second slide">
+          <img src="images/baner contato1.jpg" class="img-responsive" alt="Second slide">
           <div class="container">
             <div class="carousel-caption">
               <h1>Aguarde.</h1>
