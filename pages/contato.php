@@ -1,10 +1,33 @@
 <div id="boxContato">
 <h1>Contato</h1>
-	<br />Nome: <input type="text" name="nome" />
-	<br />Email:<input type="text" name="email" />
-	<br />Telefone:<input type="text" name="fone" />
-	<br />Mensagem: <textarea rows="10" cols="45"></textarea>
-	<br /> <input type="submit" name="btnOk" value="Enviar" />
+
+	<form name="frmCadastraVeiculo" method="POST" action="">
+
+		<table class="table">
+			<tr>
+				<td align=right>*Nome</td>					
+				<td><input type="text" name="nome" id="nome" value="" /></td>
+			</tr>
+			<tr>
+				<td align=right>*Email</td>
+				<td><input type="text" name="telefone" id="telefone" value="" /></td>
+			</tr>
+			<tr>
+					<td align=right>*Telefone</td>
+					<td><input type="text" name="telefone" id="telefone" value="" /></td>
+			</tr>
+			<tr>
+				<td align=right>*Mensagem</td>
+				<td><input type="text" name="telefone" id="telefone" value="" /></td>
+			</tr>		
+			<tr>
+
+				<td colspan=2 align=center><input type="submit"  name="enviar" value="Enviar"/></td>
+			</tr>
+	</table>
+
+
+	</form>
 
 </div>
 

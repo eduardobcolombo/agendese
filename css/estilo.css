@@ -42,6 +42,16 @@ body{
 	width:30%;
 	float:left;
 	border:2px;
-	margin:50px ;
 	background:#B0C4DE;
+}
+table, tr, td{
+	background: #B0C4DE;
+	border:0px;
+}
+body{
+
+	color:black;
+	background: #CFCFCF;
+	margin: 0 auto;
+	text-align: center;
 }
