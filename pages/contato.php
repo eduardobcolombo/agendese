@@ -6,7 +6,7 @@ if ($_POST['cadastrar'] == 'Cadastrar')
     $objContato->setEmail($_POST["email"]);
     $objContato->setTelfone($_POST["telefone"]);
     $objContato->setMensagem($_POST["mensagem"]);
-    $objFornecedor->setDB();
+    $objContato->sendEmail();
   }
 
 ?>
