@@ -1,7 +1,15 @@
+<?php
 
+if ($_POST['cadastrar'] == 'Cadastrar') 
+  {
+    $objContato->setNome($_POST["nome"]);
+    $objContato->setEmail($_POST["email"]);
+    $objContato->setTelfone($_POST["telefone"]);
+    $objContato->setMensagem($_POST["mensagem"]);
+    $objFornecedor->setDB();
+  }
 
-
-
+?>
 <div class="row">
 
 <div id="boxContato" class="col-md-4 hidden-sm hidden-xs">
@@ -17,7 +25,7 @@
 			</tr>
 			<tr>
 				<td align=right>*Email</td>
-				<td><input type="text" name="telefone" id="telefone" value="" /></td>
+				<td><input type="text" name="email" id="email" value="" /></td>
 			</tr>
 			<tr>
 					<td align=right>*Telefone</td>
@@ -25,7 +33,7 @@
 			</tr>
 			<tr>
 				<td align=right>*Mensagem</td>
-				<td><input type="text" name="telefone" id="telefone" value="" /></td>
+				<td><input type="text" name="mensagem" id="mensagem" value="" /></td>
 			</tr>		
 			<tr>
 
