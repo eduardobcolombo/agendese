@@ -94,7 +94,7 @@ if ($_POST['cadastrar'] == 'Cadastrar') {
           </div>
         </div>
         <div class="item">
-          <img src="images/imagem1.png" class="img-responsive" alt="Second slide">
+          <img src="images/imagem1.jpg" class="img-responsive" alt="Second slide">
           <div class="container">
             <div class="carousel-caption">
               <h1>Pronto para atender sua necessidade.</h1>
