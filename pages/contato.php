@@ -4,9 +4,9 @@ if ($_POST['enviar'] == 'Enviar')
   {
     $objContato->setNome($_POST["nome"]);
     $objContato->setEmail($_POST["email"]);
-    $objContato->setTelfone($_POST["telefone"]);
+    $objContato->setTelefone($_POST["telefone"]);
     $objContato->setMensagem($_POST["mensagem"]);
-    $objContato->sendEmail();
+    $objContato->setSendEmail();
   }
 
 ?>
@@ -34,7 +34,7 @@ if ($_POST['enviar'] == 'Enviar')
 			<tr>
 
         <td align=right>*Mensagem</td>
-        <td><textarea rows="10" name="mensagem" id="mensagem" cols="50"></textarea></td>
+        <td><textarea rows="10" name="mensagem" id="mensagem" cols="30"></textarea></td>
       </tr>
 			<tr>
 
