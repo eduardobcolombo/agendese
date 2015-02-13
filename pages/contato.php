@@ -1,6 +1,6 @@
 <?php
 
-if ($_POST['cadastrar'] == 'Cadastrar') 
+if ($_POST['enviar'] == 'Enviar') 
   {
     $objContato->setNome($_POST["nome"]);
     $objContato->setEmail($_POST["email"]);
@@ -32,9 +32,10 @@ if ($_POST['cadastrar'] == 'Cadastrar')
 					<td><input type="text" name="telefone" id="telefone" value="" /></td>
 			</tr>
 			<tr>
-				<td align=right>*Mensagem</td>
-				<td><input type="text" name="mensagem" id="mensagem" value="" /></td>
-			</tr>		
+
+        <td align=right>*Mensagem</td>
+        <td><textarea rows="10" name="mensagem" id="mensagem" cols="50"></textarea></td>
+      </tr>
 			<tr>
 
 				<td colspan=2 align=center><input type="submit"  name="enviar" value="Enviar"/></td>
