@@ -34,7 +34,7 @@ if ($_POST['enviar'] == 'Enviar')
 			<tr>
 
         <td align=right>*Mensagem</td>
-        <td><textarea rows="10" name="mensagem" id="mensagem" cols="30"></textarea></td>
+        <td><textarea rows="10" name="mensagem" id="mensagem" cols="35"></textarea></td>
       </tr>
 			<tr>
 

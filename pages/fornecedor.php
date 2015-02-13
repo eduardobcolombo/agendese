@@ -30,7 +30,7 @@ if ($_POST['cadastrar'] == 'Cadastrar')
 ?>
 	<div class="row">
 
-	<div id="boxFornecedor" class="col-md-4 hidden-sm hidden-xs">
+	<div id="boxFornecedor" class="col-md-4 col-sm-12 col-xs-12">
 
  		
 	<h1>Prestador de Serviços</h1>
