@@ -6,27 +6,25 @@ class Intervalo
 	public $HoraFinal;
 	public $Intervalo;
 
-	function setData($Data) 
+	function setData($data) 
 	{
 		$this ->data = $data;
 		}
-	function setTelefoneCliente($HoraIncial) 
+	function setHoraInicial($HoraIncial) 
 	{
 		$this ->HoraIncial = $HoraIncial;
 		}
 
-	function setEmail($HoraFinal) 
+	function setHoraFinal($HoraFinal) 
 	{
 		$this ->HoraFinal = $HoraFinal;
 			}
-	function setLogin($Intervalo) 
+	function setIntervalo($Intervalo) 
 	{
 		$this ->Intervalo = $Intervalo;
 			}
 	
-			}	
-
-
+			
 	function getData() 
 	{
 		return $this ->Data;
@@ -44,9 +42,9 @@ class Intervalo
 		return $this ->Intervalo;
 			}
 	 
-		{
+/*		{
 			GLOBAL $db;
-/*				try
+				try
 		{
 		    
 		  $res = $db->query("SELECT Id, servico FROM servico");
