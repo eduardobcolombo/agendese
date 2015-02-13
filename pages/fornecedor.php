@@ -28,7 +28,10 @@ if ($_POST['cadastrar'] == 'Cadastrar')
 }
 
 ?>
- 	<div id="boxFornecedor">
+	<div class="row">
+
+	<div id="boxFornecedor" class="col-md-4 hidden-sm hidden-xs">
+
  		
 	<h1>Prestador de Serviços</h1>
 
@@ -146,10 +149,40 @@ if ($_POST['cadastrar'] == 'Cadastrar')
 		</form>
 </div>	
 
+<div id="boxImagem1" class="col-md-8 col-sm-7 col-xs-10">
 
-<div id="boxImagem1">
-	<img src="images/trabalhadores.jpg" />
+	<!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+         <div class="carousel-inner">
+        <div class="item active">
+          <img src="images/imagem.jpg" class="img-responsive" alt="First slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Venha trabalhar conosco,</h1>
+              <p></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="images/imagem2.jpg" class="img-responsive" alt="Second slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Seja um de nossos parceiros.</h1>
+              <p></p>
+            </div>
+          </div>
+        </div>
 
+      </div>
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+    </div><!-- /.carousel -->
+<br />
+
+
+</div>
 
 </div>	
 
