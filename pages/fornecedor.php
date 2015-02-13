@@ -160,7 +160,7 @@ if ($_POST['cadastrar'] == 'Cadastrar')
           <img src="images/imagem.jpg" class="img-responsive" alt="First slide">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Venha trabalhar conosco,</h1>
+              text-shadow: #000 2px 3px 2px; <h1>Venha trabalhar conosco,</h1>
               <p></p>
             </div>
           </div>
