@@ -20,6 +20,7 @@ class Fornecedor
 	public $servicos;
 	public $senha;
 	public $confirmaSenha;
+	public $logotipo;
 /*	private $manicure;
 	private $cabelereiro;
 	private $massoterapeuta;
@@ -48,6 +49,15 @@ class Fornecedor
 	function setCabelereiro($cabelereiro){$this ->cabelereiro = $cabelereiro;}
 	function setMassoterapeuta($massoterapeuta){$this ->massoterapeuta = $massoterapeuta;}
 	function setFisioterapeuta($fisioterapeuta){$this ->fisioterapeuta = $fisioterapeuta;}
+
+	/* tratamento de imagem */
+
+	function setLogotipo($logotipo){
+		$this ->logotipo = $logotipo;
+		
+		 move_uploaded_file($this ->logotipo['tmp_name' ], "images/".$this ->logotipo['name' ]);
+
+	}  
 */
 	/* OS GETS*/
 	function getNome($nome) {return $this ->nome;}
@@ -73,6 +83,9 @@ class Fornecedor
 	function getMassoterapeuta($massoterapeuta){return $this ->massoterapeuta;}
 	function getFisioterapeuta($fisioterapeuta){return $this ->fisioterapeuta;}
 */	
+
+	function getLogotipo($logotipo){
+		return $this ->logotipo;
 
 
  // FUNǇÃO INSERIR NO BANCO DE DADOS  
@@ -104,7 +117,8 @@ INSERT INTO fornecedor
  ie, 
  servicos, 
  senha, 
- confirmaSenha)
+ confirmaSenha,
+ logotipo)
 VALUES    
 ('".$this->nome."',
  '".$this->telefone."',
@@ -123,7 +137,8 @@ VALUES
  '".$this->ie."',
  '".$this->servicos."',
  '".$this->senha."', 
- '".$this->confirmaSenha."')");
+ '".$this->confirmaSenha."',
+ '".$this->logotipo['name']."')");
 
 
  		 			  
@@ -146,7 +161,8 @@ VALUES
 		                                  cpf_cnpj = '".$this->cpf_cnpj."',
 		                                  ie = '".$this->ie."',
 		                                  senha= '".$this->senha."',
-		                                  confirmaSenha = '".$this->confirmaSenha."'
+		                                  confirmaSenha = '".$this->confirmaSenha."',
+		                                  logotipo = '".$this->logotipo."'
 		                                  WHERE id = '".$id_fornecedor."' ");
 
 	#######
@@ -169,7 +185,7 @@ VALUES
 				try
 		{
 		    
-		  $res = $db->query("SELECT Id,nome, telefone, celular, email, site, cep, logradouro, numero, bairro, cidade, estado, latitude, longitude, cpf_cnpj, ie, senha, confirmaSenha, cabelereiro, manicure, massoterapeuta, fisioterapeuta FROM fornecedor");
+		  $res = $db->query("SELECT Id,nome, telefone, celular, email, site, cep, logradouro, numero, bairro, cidade, estado, latitude, longitude, cpf_cnpj, ie, senha, confirmaSenha, cabelereiro, manicure, massoterapeuta, fisioterapeuta, logotipo FROM fornecedor");
 		  return $res;
 
 		   // ENCERRA O OBJETO DE CONEXÃO COM O BANCO
@@ -189,14 +205,22 @@ function getFornecedorPesquisa($filtro)
 		{
 
 		    
-		  $res = $db->query("SELECT Id, nome, servicos, telefone, celular, site, logradouro, bairro, cidade, estado
-		  	 				   FROM fornecedor
-		  	 				  WHERE nome
-		  	 				   LIKE '%".$filtro."%'
+		  $res = $db->query("SELECT Id, nome, servicos, telefone, celular, site, logradouro, bairro, cidade, estado, email,logotipo
+		  	 	  FROM fornecedor
+		  	 	WHERE nome
+		  	 	 LIKE '%".$filtro."%'
+		  	 	 OR servicos
+		  	 	LIKE '%".$filtro."%'
+		  	 	OR bairro
+		  	 	 LIKE '%".$filtro."%'
+		  	 	OR cidade
+		  	 	LIKE '%".$filtro."%'
+		  	 	OR estado
+		  	 	LIKE '%".$filtro."%'
 
-		  	 			   ORDER BY nome  ASC
+		  	 	ORDER BY nome  ASC
 
-		  	 				   ");
+		  	 			  ");
 		  return $res;
 
 		   // ENCERRA O OBJETO DE CONEXÃO COM O BANCO
