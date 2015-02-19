@@ -5,23 +5,23 @@ $pesquisa = $objFornecedor->getFornecedorPesquisa($_POST['filtro']);
 
 	while($linha = $pesquisa->fetch(PDO::FETCH_OBJ)) {
 		echo  $linha->nome;
-		echo " - ";
+		echo "   ";
 		echo $linha->servicos;
-		echo " - ";
+		echo "   ";
 		echo $linha->telefone;
-		echo " - ";
+		echo "   ";
 		echo $linha->celular;
-		echo " - ";
+		echo "   ";
 		echo $linha->site;
-		echo " - ";
+		echo "   ";
 		echo $linha->logradouro;
-		echo " - ";
+		echo "   ";
 		echo $linha->bairro;
-		echo " - ";
+		echo "   ";
 		echo $linha->cidade;
-		echo " - ";
+		echo "   ";
 		echo $linha->estado;
-		echo " - ";
+		echo "   "."<br />";
 
 	} 
 
