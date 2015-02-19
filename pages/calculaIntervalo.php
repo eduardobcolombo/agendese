@@ -10,7 +10,7 @@ if ($_POST['cadastrar'] == 'Cadastrar') {
 	
 ?>
         
-				<h1> Cadastro de Hor√°rios </h1>
+				<h1> Cadastro de Hor·rios </h1>
 
 
 					
@@ -22,11 +22,11 @@ if ($_POST['cadastrar'] == 'Cadastrar') {
 						<td> <input type="date" name="Data" id="Data" value="" /> </td>
 					</tr>
 					<tr>
-						<td> Hor√°rio Inicial:</td>
+						<td> Hor·rio Inicial:</td>
 						<td> <input type="time" name="HoraInicial"  id="HoraInicial" value="" /> </td>
 					</tr>
 					<tr>
-						<td> Hor√°rio Final:</td>
+						<td> Hor·rio Final:</td>
 						<td> <input type="time" name="HoraFinal" id="HoraFinal" value="" /> </td>
 					</tr>
 					<tr>
