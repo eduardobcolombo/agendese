@@ -68,14 +68,5 @@ body{
 #logotipos{
 	float : left;
 }
-#sobre{
-	float : right;
-}
-#tempo{
-    overflow: hidden; 
-    width: 100%;
-    height: 100%;
-    position: relative; 
-    background: rgba(255,255,255,0.8);
-    background: #FFF;
-}
+
+
