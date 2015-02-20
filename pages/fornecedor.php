@@ -131,6 +131,10 @@ if ($_POST['cadastrar'] == 'Cadastrar')
 					<td><input type="file" name="logotipo" id="logotipo" value="" /></td>
 				</tr>
 				<tr>
+					<td align=right>*Login</td>
+					<td><input type="text" name="login" id="login" value="" /></td>
+				</tr>
+				<tr>
 					<td align=right>*Senha</td>
 					<td><input type="password" name="senha" id="senha" value="" /></td>
 				</tr>

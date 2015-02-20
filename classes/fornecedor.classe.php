@@ -18,6 +18,7 @@ class Fornecedor
 	public $cpf_cnpj;
 	public $ie;
 	public $servicos;
+	public $login;
 	public $senha;
 	public $confirmaSenha;
 	public $logotipo;
@@ -43,6 +44,7 @@ class Fornecedor
 	function setCpf_cnpj($cpf_cnpj) {$this ->cpf_cnpj = $cpf_cnpj;}
 	function setIe($ie) {$this ->ie = $ie;}
 	function setServicos($servicos) {$this ->servicos = $servicos;}
+	function setlogin($login) {$this ->login = $login;}
 	function setSenha($senha){$this ->senha = md5($senha);}
 	function setConfirmaSenha($comfirmaSenha){$this ->comfirmaSenha = md5($comfirmaSenha);}
 /*	function setManicure($setManicure){$this ->manicure = $manicure;}
@@ -75,6 +77,7 @@ class Fornecedor
 	function getLongitude($longitude) {return $this ->longitude;}
 	function getCpf_cnpj($cpf_cnpj) {return $this ->cpf_cnpj;}
 	function getIe($ie) {return $this ->ie;}
+	function getLogin($login) {return $this ->login;}
 	function getServicos($servicos) {return $this ->servicos;}
 	function getSenha($senha){return $this ->senha;}
 	function getConfirmaSenha($confirmaSenha){return $this ->confirmaSenha;}
@@ -116,6 +119,7 @@ INSERT INTO fornecedor
  cpf_cnpj, 
  ie, 
  servicos, 
+ login,
  senha, 
  confirmaSenha,
  logotipo)
@@ -136,6 +140,7 @@ VALUES
  '".$this->cpf_cnpj."',
  '".$this->ie."',
  '".$this->servicos."',
+ '".$this->login."',
  '".$this->senha."', 
  '".$this->confirmaSenha."',
  '".$this->logotipo['name']."')");
@@ -160,6 +165,7 @@ VALUES
 		                                  longitude = '".$this->longitude."',
 		                                  cpf_cnpj = '".$this->cpf_cnpj."',
 		                                  ie = '".$this->ie."',
+		                                  login = '".$this->login."',
 		                                  senha= '".$this->senha."',
 		                                  confirmaSenha = '".$this->confirmaSenha."',
 		                                  logotipo = '".$this->logotipo."'
@@ -177,7 +183,25 @@ VALUES
 	}
 		}
 		//function gravaNoBanco() {}
+function getfornecedorByLogin($login) 
+	{
+			GLOBAL $db;
+				try
+		{
+		    
+		  $res = $db->query("SELECT   id,nome, telefone, email, login, senha FROM fornecedor
+		  					WHERE login = '".$login."'");
 
+		  return $res;
+
+		// SE HOUVER O OBJETO DE CONEXÃO COM O BANCO
+		} catch (PDOException $e) {
+		  //IMPRIME O ERRO
+		  print "Erro!: " .$e->getMessage() . "<br />";
+		  // MORRE
+		  die();
+			}
+		}//fecha metodo
 
 		function getfornecedor() 
 	{
@@ -185,7 +209,7 @@ VALUES
 				try
 		{
 		    
-		  $res = $db->query("SELECT Id,nome, telefone, celular, email, site, cep, logradouro, numero, bairro, cidade, estado, latitude, longitude, cpf_cnpj, ie, senha, confirmaSenha, cabelereiro, manicure, massoterapeuta, fisioterapeuta, logotipo FROM fornecedor");
+		  $res = $db->query("SELECT Id,nome, telefone, celular, email, site, cep, logradouro, numero, bairro, cidade, estado, latitude, longitude, cpf_cnpj, ie, login, senha, confirmaSenha, cabelereiro, manicure, massoterapeuta, fisioterapeuta, logotipo FROM fornecedor");
 		  return $res;
 
 		   // ENCERRA O OBJETO DE CONEXÃO COM O BANCO

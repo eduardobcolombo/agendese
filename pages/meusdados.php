@@ -32,12 +32,12 @@ if ($_POST['Alterar'] == 'Alterar') {
 				</tr>
 				<tr>
 					<td align=right>Telefone</td>
-					<td><input type="text" name="telefone" id="telefone" value="<?php echo $cliente->TelefoneCliente; ?> " /></td>
+					<td><input type="text" name="telefone" id="telefone" value="<?php echo $cliente->telefoneCliente; ?> " /></td>
 				</tr>
 				
 				<tr>
 					<td align=right>E-mail </td>
-					<td><input type="text" name="email" id="email" value="<?php echo $cliente->Email; ?>" /></td>
+					<td><input type="text" name="email" id="email" value="<?php echo $cliente->email; ?>" /></td>
 				</tr>	
 				<tr>
 
