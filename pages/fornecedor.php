@@ -31,7 +31,7 @@ if ($_POST['cadastrar'] == 'Cadastrar')
 ?>
 	<div class="row">
 
-	<div id="boxFornecedor" class="col-md-4 col-sm-12 col-xs-12">
+	<div id="boxFornecedor" class="col-md-4 hidden-sm hidden-xs">
 
  		
 	<h1>Prestador de Serviços</h1>
@@ -165,7 +165,7 @@ if ($_POST['cadastrar'] == 'Cadastrar')
           <img src="images/imagem.jpg" class="img-responsive" alt="First slide">
           <div class="container">
             <div class="carousel-caption">
-              text-shadow: #000 2px 3px 2px; <h1>Venha trabalhar conosco,</h1>
+              <h1>Venha trabalhar conosco,</h1>
               <p></p>
             </div>
           </div>
