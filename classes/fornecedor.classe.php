@@ -50,6 +50,7 @@ class Fornecedor
 	function setMassoterapeuta($massoterapeuta){$this ->massoterapeuta = $massoterapeuta;}
 	function setFisioterapeuta($fisioterapeuta){$this ->fisioterapeuta = $fisioterapeuta;}
 
+*/
 	/* tratamento de imagem */
 
 	function setLogotipo($logotipo){
@@ -58,7 +59,6 @@ class Fornecedor
 		 move_uploaded_file($this ->logotipo['tmp_name' ], "images/".$this ->logotipo['name' ]);
 
 	}  
-*/
 	/* OS GETS*/
 	function getNome($nome) {return $this ->nome;}
 	function getTelefone($telefone) {return $this ->telefone;}
@@ -233,7 +233,7 @@ function getFornecedorPesquisa($filtro)
 			}
 		}//fecha metodo
 
-
+}
 
 }
 ?>
