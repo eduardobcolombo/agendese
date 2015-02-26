@@ -232,7 +232,7 @@ function getFornecedorPesquisa($filtro)
 		  $res = $db->query("SELECT Id, nome, servicos, telefone, celular, site, logradouro, bairro, cidade, estado, email,logotipo
 		  	 	  FROM fornecedor
 		  	 	WHERE nome
-		  	 	 LIKE '%".$filtro."%'
+		  	 	 LIKE '%".$filtro."%' 
 		  	 	 OR servicos
 		  	 	LIKE '%".$filtro."%'
 		  	 	OR bairro
