@@ -9,7 +9,7 @@ if ($_POST['cadastrar'] == 'Cadastrar') {
 }
 	
 ?>
-   
+   		<div id="boxCadastraHorario">
 
 				<h1> Cadastro de Horários </h1>
 

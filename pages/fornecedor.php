@@ -191,7 +191,7 @@ if ($_POST['cadastrar'] == 'Cadastrar')
 <br />
 
 
-</div>
+	</div>
 
 </div>	
 
