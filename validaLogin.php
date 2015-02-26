@@ -1,5 +1,6 @@
 <?php
 
+
 require ("includes/util.php");
 
 	$login = $_GET['ds_usuario'];
@@ -7,7 +8,7 @@ require ("includes/util.php");
 
 	$consulta = $objCliente->getClienteByLogin($login);
 	$linha = $consulta->fetch(PDO::FETCH_OBJ);
-
+				  
 	$consultaF = $objFornecedor->getFornecedorByLogin($login);
 	$linhaF = $consultaF->fetch(PDO::FETCH_OBJ);
 
@@ -30,10 +31,10 @@ location.href='http://localhost/agendese/';
 		$_SESSION['id'] = $linha->Id;
 
 
-
+echo "TESTE SE CLIENTE";
 
 	} elseif ($linhaF->senha == md5($senha)) {
-
+echo "TESTE SE fORNECEDOR";
 echo "
 <script>
 location.href='http://localhost/agendese/';

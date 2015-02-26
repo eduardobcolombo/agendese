@@ -89,7 +89,7 @@ class Fornecedor
 
 	function getLogotipo($logotipo){
 		return $this ->logotipo;
-
+	}
 
  // FUNǇÃO INSERIR NO BANCO DE DADOS  
 
@@ -183,10 +183,11 @@ VALUES
 	}
 		}
 		//function gravaNoBanco() {}
-function getfornecedorByLogin($login) 
+function getFornecedorByLogin($login) 
 	{
+
 			GLOBAL $db;
-				try
+		try
 		{
 		    
 		  $res = $db->query("SELECT   id,nome, telefone, email, login, senha FROM fornecedor
@@ -201,7 +202,7 @@ function getfornecedorByLogin($login)
 		  // MORRE
 		  die();
 			}
-		}//fecha metodo
+	}//fecha metodo
 
 		function getfornecedor() 
 	{
@@ -257,7 +258,5 @@ function getFornecedorPesquisa($filtro)
 			}
 		}//fecha metodo
 
-}
-
-}
+	}
 ?>
