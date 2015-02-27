@@ -1,5 +1,5 @@
 <?php
-ini_set("display_errors", 0);
+ini_set("display_errors", 1);
 
 
 try
@@ -25,5 +25,9 @@ include("classes/contato.classe.php");
 
  include("classes/servicos.classe.php");
   $objServicos = new Servicos();
+
+  include("classes/Intervalo.classe.php");
+  $objIntervalo = new Intervalo();
+   
 
 ?>
