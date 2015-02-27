@@ -183,14 +183,36 @@ VALUES
 	}
 		}
 		//function gravaNoBanco() {}
-function getFornecedorByLogin($login) 
-	{
+function getFornecedorById($Id) 
 
+	{
 			GLOBAL $db;
-		try
+
+				try
 		{
 		    
-		  $res = $db->query("SELECT   id,nome, telefone, email, login, senha FROM fornecedor
+		  $res = $db->query("SELECT   Id,nome, telefone, email, login, senha FROM fornecedor
+		  					WHERE Id = '".$Id."'");
+
+
+
+		  return $res;
+
+		// SE HOUVER O OBJETO DE CONEXÃO COM O BANCO
+		} catch (PDOException $e) {
+		  //IMPRIME O ERRO
+		  print "Erro!: " .$e->getMessage() . "<br />";
+		  // MORRE
+		  die();
+			}
+		}//fecha metodo
+function getFornecedorByLogin($login) 
+	{
+			GLOBAL $db;
+				try
+		{
+		    
+		  $res = $db->query("SELECT   Id,nome, telefone, email, login, senha FROM fornecedor
 		  					WHERE login = '".$login."'");
 
 		  return $res;
@@ -202,7 +224,7 @@ function getFornecedorByLogin($login)
 		  // MORRE
 		  die();
 			}
-	}//fecha metodo
+		}//fecha metodo
 
 		function getfornecedor() 
 	{
@@ -232,16 +254,11 @@ function getFornecedorPesquisa($filtro)
 		    
 		  $res = $db->query("SELECT Id, nome, servicos, telefone, celular, site, logradouro, bairro, cidade, estado, email,logotipo
 		  	 	  FROM fornecedor
-		  	 	WHERE nome
-		  	 	 LIKE '%".$filtro."%' 
-		  	 	 OR servicos
-		  	 	LIKE '%".$filtro."%'
-		  	 	OR bairro
-		  	 	 LIKE '%".$filtro."%'
-		  	 	OR cidade
-		  	 	LIKE '%".$filtro."%'
-		  	 	OR estado
-		  	 	LIKE '%".$filtro."%'
+		  	 	WHERE nome  LIKE '%".$filtro."%'
+		  	 	OR servicos LIKE '%".$filtro."%'
+		  	 	OR bairro   LIKE '%".$filtro."%'
+		  	 	OR cidade   LIKE '%".$filtro."%'
+		  	 	OR estado   LIKE '%".$filtro."%'
 
 		  	 	ORDER BY nome  ASC
 
@@ -258,5 +275,8 @@ function getFornecedorPesquisa($filtro)
 			}
 		}//fecha metodo
 
-	}
+}
+
+
 ?>
+
