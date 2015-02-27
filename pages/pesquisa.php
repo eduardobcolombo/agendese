@@ -40,9 +40,9 @@ $pesquisa = $objFornecedor->getFornecedorPesquisa($_POST['filtro']);
 		"</td>";
 		echo "</tr>";
 
+*/ 
 	} 
 		echo "</table>";
-*/ 
 ?>
 
 
