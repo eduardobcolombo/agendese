@@ -101,7 +101,7 @@ class Cliente
 			$res = $db->exec("UPDATE cliente  SET 
 		                                  nomeCliente = '".$this->nomeCliente."',
 		                                  telefoneCliente = '".$this->telefoneCliente."',
-		                                  email = '".$this->email."',
+		                                  email = '".$this->email."'
 		                                  
 		                                  WHERE id = '".$id_cliente."' ");
 
