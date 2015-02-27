@@ -18,6 +18,7 @@ if ($_POST['cadastrar'] == 'Cadastrar')
 	$objFornecedor->setCpf_cnpj($_POST["cpf_cnpj"]);
 	$objFornecedor->setIe($_POST["ie"]);
 	$objFornecedor->setServicos($_POST["servico"]);
+	$objFornecedor->setLogin($_POST["login"]);
 	$objFornecedor->setSenha($_POST["senha"]);
 	$objFornecedor->setConfirmaSenha($_POST["confirmaSenha"]);
 	$objFornecedor->setLogotipo($_FILES["logotipo"]);
