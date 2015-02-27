@@ -22,4 +22,8 @@ include("classes/fornecedor.classe.php");
 
 include("classes/contato.classe.php");
   $objContato = new Contato();
+
+ include("classes/servicos.classe.php");
+  $objServicos = new Servicos();
+
 ?>

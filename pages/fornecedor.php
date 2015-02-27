@@ -106,24 +106,19 @@ if ($_POST['cadastrar'] == 'Cadastrar')
 					<td align=right>*Serviços</td>
 					<td><input type="text" name="servicos" id="servicos" value="" /></td>
 				</tr>
-				<td align=left> 
-<input type='checkbox' name='servico[]' id='servico[]' value="1" /> Manicure <br />
-<input type='checkbox' name='servico[]' id='servico[]' value="2" /> Cabelereiro <br />
-<input type='checkbox' name='servico[]' id='servico[]' value="3" /> Massoterapeuta <br />
-<input type='checkbox' name='servico[]' id='servico[]' value="4" /> Eletrecista <br />
-<input type='checkbox' name='servico[]' id='servico[]' value="5" /> Encanador <br />
-<input type='checkbox' name='servico[]' id='servico[]' value="6" /> Auxiliar de Limpeza <br />
-<input type='checkbox' name='servico[]' id='servico[]' value="7" /> Jardineiro <br />
-<input type='checkbox' name='servico[]' id='servico[]' value="8" /> Prof de Idiomas <br />
-<input type='checkbox' name='servico[]' id='servico[]' value="9" /> Prof de Informática <br />
-<input type='checkbox' name='servico[]' id='servico[]' value="10" /> Pedreiro <br />
-<input type='checkbox' name='servico[]' id='servico[]' value="11" /> Eletrecista Predial <br />
-<input type='checkbox' name='servico[]' id='servico[]' value="12" /> Peeling <br />
-<input type='checkbox' name='servico[]' id='servico[]' value="13" /> Corretor de Imoveis <br />
-<input type='checkbox' name='servico[]' id='servico[]' value="14" /> Fisioterapeuta <br />
-<input type='checkbox' name='servico[]' id='servico[]' value="15" /> Tec. de Informática <br />
-<input type='checkbox' name='servico[]' id='servico[]' value="16" /> Personal Trainer <br />
-<input type='checkbox' name='servico[]' id='servico[]' value="17" /> Enfermeira <br />
+				<td align=left>
+
+<?php
+
+$pesquisa = $objServicos -> getServicos();
+
+while($linha = $pesquisa->fetch(PDO::FETCH_OBJ)) {
+		echo "<input type='checkbox' name='servico[]' id='servico[]' value='".$linha->Id."' /> ".$linha->servico." <br />";
+
+		}
+
+?>
+
 					</td>
 				</tr>
 				<tr>
