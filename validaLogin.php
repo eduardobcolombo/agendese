@@ -11,58 +11,59 @@ require ("includes/util.php");
 				  
 	$consultaF = $objFornecedor->getFornecedorByLogin($login);
 	$linhaF = $consultaF->fetch(PDO::FETCH_OBJ);
+	if ($linha != false){
 
 
-	if($linha->senha == md5($senha)) {
-		echo "
-<script>
-location.href='http://localhost/agendese/';
-</script>
-		";
+		if($linha->senha == md5($senha)) {
+
+			echo "
+	<script>
+	location.href='http://localhost/agendese/';
+	</script>
+			";
 
 
-		// LOGANDO USUÁRIO CLIENTE
-		session_start();
+			// LOGANDO USUÁRIO CLIENTE
+			session_start();
 
-		$_SESSION['logado'] = true;
-		$_SESSION['nomeCliente'] = $linha->nomeCliente;
-		$_SESSION['login'] = $linha->login;
-		$_SESSION['tipo'] = $linha->tipo;
-		$_SESSION['id'] = $linha->Id;
+			$_SESSION['logado'] = true;
+			$_SESSION['nomeCliente'] = $linha->nomeCliente;
+			$_SESSION['login'] = $linha->login;
+			$_SESSION['tipo'] = $linha->tipo;
+			$_SESSION['id'] = $linha->Id;
 
+			} else {
+				echo "Usuário e/ou Senha Inválidos [CLIENTE] ";
+				}
 
-echo "TESTE SE CLIENTE";
-
-	} elseif ($linhaF->senha == md5($senha)) {
-echo "TESTE SE fORNECEDOR";
-echo "
-<script>
-location.href='http://localhost/agendese/';
-</script>
-		";
-
-
-		// LOGANDO  FORNECEDOR
-		session_start();
-
-		$_SESSION['logado'] = true;
-		$_SESSION['nome'] = $linha->nome;
-		$_SESSION['login'] = $linha->login;
-		$_SESSION['id'] = $linha->Id;
-
-
-
-
+		 
 	} else {
-		echo "Usuário e/ou Senha Inválidos";
+
+		if ($linhaF != false){
+			if ($linhaF->senha == md5($senha)) {
+		echo "
+		<script>
+		location.href='http://localhost/agendese/';
+		</script>
+				";
+
+				// LOGANDO  FORNECEDOR
+				session_start();
+
+				$_SESSION['logado'] = true;
+				$_SESSION['nomeCliente'] = $linhaF->nome;
+				$_SESSION['login'] = $linhaF->login;
+				$_SESSION['tipo'] = "Fornecedor";
+				$_SESSION['id'] = $linhaF->Id;
+
+
+
+
+			} else {
+				echo "Usuário e/ou Senha Inválidos [  FORNECEDOR  ]";
+			}
+		}
 	}
 
 
 ?>
-
-
-
-
-
-
-
