@@ -1,18 +1,34 @@
 <?php
 class Intervalo
 {
-	public $Data;
-	public $HoraIncial;
+	public $DataInicial;
+	public $DataFinal;
+	public $HoraInicial;
 	public $HoraFinal;
 	public $Intervalo;
+	public $Id_fornecedor;
+	public $Id_servico;
 
-	function setData($data) 
+	function setId_fornecedor($Id_fornecedor) 
 	{
-		$this ->data = $data;
+		$this ->Id_fornecedor = $Id_fornecedor;
 		}
-	function setHoraInicial($HoraIncial) 
+
+	function setId_servico($Id_servico) 
 	{
-		$this ->HoraIncial = $HoraIncial;
+		$this ->Id_servico = $Id_servico;
+		}
+	function setDataInicial($dataInicial) 
+	{
+		$this ->DataInicial = $dataInicial;
+		}
+	function setDataFinal($dataFinal) 
+	{
+		$this ->DataFinal = $dataFinal;
+		}
+	function setHoraInicial($HoraInicial) 
+	{
+		$this ->HoraInicial = $HoraInicial;
 		}
 
 	function setHoraFinal($HoraFinal) 
@@ -24,11 +40,22 @@ class Intervalo
 		$this ->Intervalo = $Intervalo;
 			}
 	
-			
-	function getData() 
+	function getId_fornecedor() 
 	{
-		return $this ->Data;
-	}
+		return $this ->Id_fornecedor;
+			}
+	function getId_servico() 
+	{
+		return $this ->Id_servico;
+			}
+	function getDataInicial() 
+	{
+		return $this ->DataInicial;
+			}		
+	function getDataFinal() 
+	{
+		return $this ->DataFinal;
+			}
 	function getHoraInicial() 
 	{
 		return $this ->HoraInicial;
@@ -63,25 +90,15 @@ class Intervalo
 
  // FUNÇÃO INSERIR NO BANCO DE DADOS  
 
-	function setDB($id_Intervalo = null) {
+	function setDB() {
 			GLOBAL $db;
 
 			try
 		{
-		    if ($id_Intervalo == null) {
-	 		 			  $res = $db->exec("INSERT INTO fornecedor_has_servico (Data, HoraIncial, HoraFinal, Intervalo)
-		                                VALUES    ('".$this->Data."','".$this->HoraIncial."','".$this->HoraFinal."','".$this->Intervalo."')");
-		// SE HOUVER O OBJETO DE CONEXÃO COM O BANCO
-		} else {
-			$res = $db->exec("UPDATE Intervalo  SET 
-		                                  Data = '".$this->Data."',
-		                                  HoraIncial = '".$this->HoraIncial."',
-		                                  HoraFinal = '".$this->HoraFinal."',
-		                                  Intervalo = '".$this->Intervalo."',
-		                                  WHERE id = '".$id_Intervalo."' ");
 
-	#######
-		} 
+		  	$res = $db->exec("INSERT INTO agendahorario (Id_fornecedor,Id_servico,DataInicial, DataFinal, HoraInicial, HoraFinal, Intervalo)
+                    VALUES    ('".$this->Id_fornecedor."','".$this->Id_servico."','".$this->DataInicial."','".$this->DataFinal."','".$this->HoraInicial."','".$this->HoraFinal."','".$this->Intervalo."')");
+
 		echo "Cadastro Efetuado com Sucesso";
 
 	} catch (PDOException $e) {
