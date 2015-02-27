@@ -3,6 +3,16 @@
 
 $pesquisa = $objFornecedor->getFornecedorPesquisa($_POST['filtro']);
 	
+
+	while($linha = $pesquisa->fetch(PDO::FETCH_OBJ)) {
+		echo  $linha->nome;
+		echo " - ";
+		echo $linha->servicos;
+		echo " - ";
+		echo "<a href = 'http://localhost/agendese/?page=calculaIntervalo&id=".$linha->Id.",".$linha->servicos."'>clique </a>";
+/*		
+$pesquisa = $objFornecedor->getFornecedorPesquisa($_POST['filtro']);
+	
 		echo "<table>";
 
 	while($linha = $pesquisa->fetch(PDO::FETCH_OBJ)) {
@@ -32,7 +42,7 @@ $pesquisa = $objFornecedor->getFornecedorPesquisa($_POST['filtro']);
 
 	} 
 		echo "</table>";
-
+*/ 
 ?>
 
 
