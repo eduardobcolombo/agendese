@@ -1,9 +1,9 @@
 <?php
 if ($_POST['Alterar'] == 'Alterar') {
-	$objCliente->setnomeCliente($_POST["nome"]);
+	$objCliente->setNomeCliente($_POST["nome"]);
 	$objCliente->setTelefoneCliente($_POST["telefone"]);
 	$objCliente->setEmail($_POST["email"]);
-	$objCliente->setDB();
+	$objCliente->setDB($_SESSION['id']);
 }
 
 
