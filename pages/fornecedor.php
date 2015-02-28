@@ -1,5 +1,7 @@
 <?php
 
+var_dump($_POST);
+
 if ($_POST['cadastrar'] == 'Cadastrar') 
 {
 	$objFornecedor->setNome($_POST["nome"]);
@@ -105,9 +107,7 @@ if ($_POST['cadastrar'] == 'Cadastrar')
 				</tr>
 				<tr>
 					<td align=right>*Serviços</td>
-					<td><input type="text" name="servicos" id="servicos" value="" /></td>
-				</tr>
-				<td align=left>
+					<td align=left>
 
 <?php
 

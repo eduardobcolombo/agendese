@@ -22,6 +22,7 @@ class Fornecedor
 	public $senha;
 	public $confirmaSenha;
 	public $logotipo;
+	public $id_fornecedor;
 /*	private $manicure;
 	private $cabelereiro;
 	private $massoterapeuta;
@@ -47,6 +48,7 @@ class Fornecedor
 	function setlogin($login) {$this ->login = $login;}
 	function setSenha($senha){$this ->senha = md5($senha);}
 	function setConfirmaSenha($comfirmaSenha){$this ->comfirmaSenha = md5($comfirmaSenha);}
+	function setId_fornecedor($id_fornecedor){$this ->id_fornecedor = $id_fornecedor;}
 /*	function setManicure($setManicure){$this ->manicure = $manicure;}
 	function setCabelereiro($cabelereiro){$this ->cabelereiro = $cabelereiro;}
 	function setMassoterapeuta($massoterapeuta){$this ->massoterapeuta = $massoterapeuta;}
@@ -144,6 +146,30 @@ VALUES
  '".$this->senha."', 
  '".$this->confirmaSenha."',
  '".$this->logotipo['name']."')");
+
+echo $db->lastInsertId();
+
+	$this->setId_fornecedor($db->lastInsertId());
+//#####################################################################################
+
+//	$this->servicos
+
+//inicia laço
+$iTot = count($this->servicos);
+
+for ($i = 0; $i <$iTot; $i++) {
+
+	$res = $db->exec("
+		INSERT INTO fornecedor_has_servico 
+		(Id_fornecedor, Id_servico)
+		VALUES    
+		('".$this->id_fornecedor."', '".$this->servicos[$i]."')
+	");
+
+}
+//finalizar laço
+
+//#####################################################################################
 
 
  		 			  
