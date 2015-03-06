@@ -1,4 +1,28 @@
+function OnEnter(evt)
+{
+    var key_code = evt.keyCode  ? evt.keyCode  :
+                       evt.charCode ? evt.charCode :
+                       evt.which    ? evt.which    : void 0;
+ 
+ 
+    if (key_code == 13)
+    {
+        return true;
+    }
+}
 
+function EnviaFormulario(e)
+{
+    if(OnEnter(e))
+    {
+      verificaAcesso();
+        return false;
+    }
+    else
+    {
+        return true;
+    }
+}
 
 function verificaUsuarioExiste() {
 	var login = document.getElementsByName("login")[0].value;
@@ -37,7 +61,7 @@ function get() {
 			try {
 				http = new ActiveXObject("Microsoft.XMLHTTP");
 			} catch(e){
-				window.alert("Erro, browser não detectou XMLHTTP. -> "+e);
+				window.alert("Erro, browser nÃ£o detectou XMLHTTP. -> "+e);
 			}
 		}
 	}
