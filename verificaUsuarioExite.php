@@ -12,11 +12,26 @@ require ("includes/util.php");
 	$linhaF = $consultaF->fetch(PDO::FETCH_OBJ);
 	if ($linha != false){
 		echo "Este LOGIN de cliente já existe. Tente outro.";
+		echo "
+<script type='text/javascript'>
+
+	document.getElementById('login').focus();
+
+</script>
+		";
 		 
 	} else {
 
 		if ($linhaF != false){
 			echo "Este LOGIN de fornecedor já existe. Tente outro.";			
+			echo "
+<script type='text/javascript'>
+
+	document.getElementById('login').focus();
+
+</script>
+		";
+		 
 		}
 	}
 
