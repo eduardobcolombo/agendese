@@ -5,6 +5,7 @@ session_start();
 
 
 if ($_GET['sair'] == "true") {
+  unset($_SESSION);
   session_destroy();
 }
 
@@ -66,7 +67,7 @@ if (!$_SESSION['logado']) { ?>
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Cadastre-se<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="http://localhost/agendese/?page=cadastre-se">Cliente</a></li>
-                <li><a href="http://localhost/agendese/?page=fornecedor">Prestador de ServiÁos</a></li>
+                <li><a href="http://localhost/agendese/?page=fornecedor">Prestador de Servi√ßos</a></li>
               </ul>
             </li>
           </ul>
@@ -86,12 +87,12 @@ if (!$_SESSION['logado']) { ?>
 if ($_SESSION['tipo'] == "Administrador") { ?>
           <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">RelatÛrios <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Relat√≥rios <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="#">Geral</a></li>
-                <li><a href="#">Anivers·rio</a></li>
+                <li><a href="#">Anivers√°rio</a></li>
                 <li><a href="#">Telefones</a></li>
-                <li><a href="#">EndereÁos</a></li>
+                <li><a href="#">Endere√ßos</a></li>
               </ul>
             </li>
           </ul>
@@ -106,17 +107,17 @@ if ($_SESSION['tipo'] == "Administrador") { ?>
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" id="exampleModalLabel">AutenticaÁ„o</h4>
+        <h4 class="modal-title" id="exampleModalLabel">Autentica√ß√£o</h4>
       </div>
       <div class="modal-body">
         <form role="form">
           <div class="form-group">
-            <label for="recipient-name" class="control-label">Usu·rio:</label>
-            <input type="text" class="form-control" id="ds_usuario" name="ds_usuario">
+            <label for="recipient-name" class="control-label">Usu√°rio:</label>
+            <input type="text" class="form-control" id="ds_usuario" name="ds_usuario" onkeypress="return EnviaFormulario(event);" />
           </div>
           <div class="form-group">
             <label for="message-text" class="control-label">Senha:</label>
-            <input class="form-control" id="ds_senha" name="ds_senha">
+            <input class="form-control" type="password" id="ds_senha" name="ds_senha" onkeypress="return EnviaFormulario(event);" />
           </div>
         </form>
       </div>
@@ -146,8 +147,8 @@ if ($_GET['page'] != "") {
 } else {
 
   if ($_SESSION['logado']) {
-    echo "Ol· ".$_SESSION['nomeCliente'];
-    echo "<br /> Seu acesso È de ".$_SESSION['tipo'].".";
+    echo "Ol√° ".$_SESSION['nomeCliente'];
+    echo "<br /> Seu acesso √© de ".$_SESSION['tipo'].".";
   }
 }
 

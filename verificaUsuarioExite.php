@@ -11,12 +11,27 @@ require ("includes/util.php");
 	$consultaF = $objFornecedor->getFornecedorByLogin($login);
 	$linhaF = $consultaF->fetch(PDO::FETCH_OBJ);
 	if ($linha != false){
-		echo "Este CLIENTE usuario jpa existe. tente outro";
+		echo "Este LOGIN de cliente já existe. Tente outro.";
+		echo "
+<script type='text/javascript'>
+
+	document.getElementById('login').focus();
+
+</script>
+		";
 		 
 	} else {
 
 		if ($linhaF != false){
-			echo "Este FORNECEDOR usuario jpa existe. tente outro";			
+			echo "Este LOGIN de fornecedor já existe. Tente outro.";			
+			echo "
+<script type='text/javascript'>
+
+	document.getElementById('login').focus();
+
+</script>
+		";
+		 
 		}
 	}
 

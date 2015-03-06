@@ -128,7 +128,8 @@ while($linha = $pesquisa->fetch(PDO::FETCH_OBJ)) {
 				</tr>
 				<tr>
 					<td align=right>*Login</td>
-					<td><input type="text" name="login" id="login" value="" /></td>
+					<td><input type="text" name="login" id="login" value="" onblur="verificaUsuarioExiste()"/>
+						<div id="msgVerificaUsuarioExiste"	name="msgVerificaUsuarioExiste"></div>
 				</tr>
 				<tr>
 					<td align=right>*Senha</td>
