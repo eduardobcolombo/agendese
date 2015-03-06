@@ -7,9 +7,13 @@ $pesquisa = $objFornecedor->getFornecedorPesquisa($_POST['filtro']);
 	while($linha = $pesquisa->fetch(PDO::FETCH_OBJ)) {
 		echo  $linha->nome;
 		echo " - ";
-		echo $linha->servicos;
+//		echo $linha->servicos;
+		$pesquisaServico = $objFornecedor->getServicosByFornecedor($linha->Id);
+		while($linhaServico = $pesquisaServico->fetch(PDO::FETCH_OBJ)){
+			echo $linhaServico->descricao_servico ." - ";
+		}
 		echo " - ";
-		echo "<a href = 'http://localhost/agendese/?page=calculaIntervalo&id=".$linha->Id.",".$linha->servicos."'>clique </a>";
+		echo "<a href = 'http://localhost/agendese/?page=calculaIntervalo&id=".$linha->Id."'>clique </a>";
 /*		
 $pesquisa = $objFornecedor->getFornecedorPesquisa($_POST['filtro']);
 	

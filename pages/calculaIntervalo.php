@@ -18,7 +18,7 @@ if ($_POST['Cadastrar'] == 'Cadastrar') {
 ?>
         <div id="boxCadastraHorario">
        
-				<h1> Cadastro de Hor√°rios </h1>
+				<h1> Cadastro de Hor·rios </h1>
 
 
 					
@@ -30,7 +30,7 @@ if ($_POST['Cadastrar'] == 'Cadastrar') {
 						<td> <input type="text" name="Id_fornecedor" id="Id_fornecedor" value="<?PHP  echo $nomeFornecedor; ?>." /> </td>
 					</tr>
 					<tr>
-						<td> Servi√ßo:</td>
+						<td> ServiÁo:</td>
 						<td> <input type="text" name="Id_servico" id="Id_servico" value="" /> </td>
 					</tr>
 					<tr>
@@ -42,11 +42,11 @@ if ($_POST['Cadastrar'] == 'Cadastrar') {
 						<td> <input type="date" name="DataFinal" id="DataFinal" value="" /> </td>
 					</tr>
 					<tr>
-						<td> Hor√°rio Inicial:</td>
+						<td> Hor·rio Inicial:</td>
 						<td> <input type="time" name="HoraInicial"  id="HoraInicial" value="" /> </td>
 					</tr>
 					<tr>
-						<td> Hor√°rio Final:</td>
+						<td> Hor·rio Final:</td>
 						<td> <input type="time" name="HoraFinal" id="HoraFinal" value="" /> </td>
 					</tr>
 					<tr>

@@ -300,8 +300,33 @@ function getFornecedorPesquisa($filtro)
 		  die();
 			}
 		}//fecha metodo
+// criando impressão do serviço na pesquisa do fornecedor
+function getServicosByFornecedor($idFornecedor) {
+
+	GLOBAL $db;
+				try
+		{
+		    
+		  $res = $db->query("SELECT fs.id_servico, s.servico as descricao_servico
+	FROM fornecedor_has_servico fs, servico s
+	WHERE fs.id_fornecedor = '".$idFornecedor."'
+	AND fs.id_servico = s.id");
+
+		  return $res;
+
+		// SE HOUVER O OBJETO DE CONEXÃO COM O BANCO
+		} catch (PDOException $e) {
+		  //IMPRIME O ERRO
+		  print "Erro!: " .$e->getMessage() . "<br />";
+		  // MORRE
+		  die();
+			}
+
 
 }
+
+}
+
 
 
 ?>
