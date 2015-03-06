@@ -1,5 +1,12 @@
 
 
+function verificaUsuarioExiste() {
+	var login = document.getElementsByName("login")[0].value;
+	var ds_parametro = "login=" + encodeURI(login);
+
+	get('verificaUsuarioExite.php?' + ds_parametro, 'msgVerificaUsuarioExiste');
+	return true;
+}
 
 
 function verificaAcesso() {
