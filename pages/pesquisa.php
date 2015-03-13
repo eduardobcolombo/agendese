@@ -1,38 +1,38 @@
 <div id="boxPesquisaFornecedor">
 <?php
 
-$pesquisa = $objFornecedor->getFornecedorPesquisa($_POST['filtro']);
+/*$pesquisa = $objFornecedor->getFornecedorPesquisa($_POST['filtro']);
 	
 
-	while($linha = $pesquisa->fetch(PDO::FETCH_OBJ)) {
+	/*while($linha = $pesquisa->fetch(PDO::FETCH_OBJ)) {
 		echo  $linha->nome;
 		echo " - ";
-//		echo $linha->servicos;
-		$pesquisaServico = $objFornecedor->getServicosByFornecedor($linha->Id);
+//		echo $linha->servicos;*/
+	/*	$pesquisaServico = $objFornecedor1->getServicosByFornecedor($linha1->Id);
 		while($linhaServico = $pesquisaServico->fetch(PDO::FETCH_OBJ)){
 			echo $linhaServico->descricao_servico ." - ";
 		}
-		echo " - ";
-		echo "<a href = 'http://localhost/agendese/?page=calculaIntervalo&id=".$linha->Id."'>clique </a>";
-/*		
+		echo " - ";*/
 $pesquisa = $objFornecedor->getFornecedorPesquisa($_POST['filtro']);
+		
 	
+//		echo "<a href = 'http://localhost/agendese/?page=calculaIntervalo".$linha->id."'>clique </a>";
 		echo "<table>";
 
+		
 	while($linha = $pesquisa->fetch(PDO::FETCH_OBJ)) {
 		echo "<tr>";
 		echo "<td style='width:100px'><div id='logotipos'>
 				<img src='images/";
 
-		if ($linha->logotipo == ""){
+	if ($linha->logotipo == ""){
 			echo "esmalte.jpg";
 		}else{
 			echo $linha->logotipo;
 		}
 
-		echo "' width=100 alt='especial' /> 
-</div></td>
-";
+		echo "' width=100 alt='logotipo' /> 
+</div></td>";
 		echo "<td align=left>" .$linha->nome. " (" .$linha->servicos. ")
 		<br /> " .$linha->telefone. " - 
 
@@ -41,13 +41,14 @@ $pesquisa = $objFornecedor->getFornecedorPesquisa($_POST['filtro']);
 
 		- " .$linha->logradouro. " - " .$linha->bairro. " - " .$linha->cidade. " - " .$linha->estado. 
 
-		"</td>";
+		"
+
+<a href = 'http://localhost/agendese/?page=calculaIntervalo".$linha->id."'>clique </a>
+
+		</td>";
 		echo "</tr>";
 
-*/ 
+ 
 	} 
 		echo "</table>";
 ?>
-
-
-
