@@ -206,9 +206,33 @@ class Cliente
 			}
 		}//fecha metodo
 
+function excluirCliente($id){
+		GLOBAL $db;
+// TENTA EXECUTAR COMANDOS NO BANCO
+		try
+		{
+		  // EXECUTA A CONSULTA NO BANCO
+		  $res = $db->exec("DELETE
+		  					   FROM cliente 
+		  					  WHERE id = ".$id."
+		  					    ");
+
+		  return $res;
+
+		// SE HOUVER ERROS APRESENTA OU TRATA
+		} catch (PDOException $e) {
+		  // IMPRIME O ERRO
+		  print "Erro!: " .$e->getMessage() . "<br />";
+		  // MORRE
+		  die();
+
+		}	
 
 
+	
 
+
+}
 
 } // final da classe pessoa
 

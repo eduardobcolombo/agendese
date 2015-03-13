@@ -6,6 +6,10 @@ if ($_POST['Alterar'] == 'Alterar') {
 	$objCliente->setDB($_SESSION['id']);
 }
 
+if ($_GET['acao'] =='excluir' ) {
+		$objCliente->excluirCliente($_GET['id']);
+
+}
 
 	$cliente = $objCliente->getClienteByLogin($_SESSION['login']);
 	$cliente = $cliente->fetch(PDO::FETCH_OBJ);
@@ -15,13 +19,16 @@ if ($_POST['Alterar'] == 'Alterar') {
 ?>
 
 
-
 <div id="boxmeusdados">
 
-
+<a href = 'http://localhost/agendese/?page=meusdados&acao=excluir&id=<?php echo $cliente->Id; ?>'>Excluir </a>
 	<h1>Meus Dados</h1>
+		<tr>
+<div id="boxexcluir">			
 
-
+					<td colspan=2 align=center><input type="submit"  name="Excluir" value="Excluir"/></td>
+				</tr>	
+</div>
 
 		<form name="meusdados" method="POST" action="">
 
@@ -38,9 +45,8 @@ if ($_POST['Alterar'] == 'Alterar') {
 				<tr>
 					<td align=right>E-mail </td>
 					<td><input type="text" name="email" id="email" value="<?php echo $cliente->email; ?>" /></td>
-				</tr>	
+				</tr>
 				<tr>
-
 					<td colspan=2 align=center><input type="submit"  name="Alterar" value="Alterar"/></td>
 				</tr>
 			</table>
