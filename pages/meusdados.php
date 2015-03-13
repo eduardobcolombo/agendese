@@ -21,7 +21,10 @@ if ($_GET['acao'] =='excluir' ) {
 
 <div id="boxmeusdados">
 
-<a href = 'http://localhost/agendese/?page=meusdados&acao=excluir&id=<?php echo $cliente->Id; ?>'>Excluir </a>
+<a href = 'http://localhost/agendese/?page=meusdados&acao=excluir&id=<?php echo $cliente->Id; ?>'
+onClick="javascript:if (confirm('Tem certeza?')){ return true;} else {return false;} ">Excluir</td></a>
+
+
 	<h1>Meus Dados</h1>
 		<tr>
 <div id="boxexcluir">			
