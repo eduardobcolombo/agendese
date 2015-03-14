@@ -43,7 +43,7 @@ $pesquisa = $objFornecedor->getFornecedorPesquisa($_POST['filtro']);
 
 		"
 
-<a href = 'http://localhost/agendese/?page=calculaIntervalo".$linha->id."'>clique </a>
+<a href = 'http://localhost/agendese/?page=calculaIntervalo".$linha->id."'>clique </a><a href = 'http://localhost/agendese/?page=agendamentoCliente".$linha->id."'>Agende-se </a>
 
 		</td>";
 		echo "</tr>";

@@ -28,6 +28,9 @@ include("classes/contato.classe.php");
 
   include("classes/Intervalo.classe.php");
   $objIntervalo = new Intervalo();
+  
+  include("classes/agendamentoCliente.classe.php");
+  $objAgendamentoCliente = new agendamentoCliente();
    
 
 ?>
