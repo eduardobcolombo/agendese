@@ -8,6 +8,9 @@ class Intervalo
 	public $Intervalo;
 	public $Id_fornecedor;
 	public $Id_servico;
+	public $Qhora;
+	public $Qintervalo;
+
 
 	function setId_fornecedor($Id_fornecedor) 
 	{
@@ -39,7 +42,16 @@ class Intervalo
 	{
 		$this ->Intervalo = $Intervalo;
 			}
+	function setQintervalo($Qintervalo) 
+	{
+		$this ->Qintervalo = $Qintervalo;
+			}
+	function setQhora($Qhora) 
+	{
+		$this ->Qhora = $Qhora;
+			}
 	
+
 	function getId_fornecedor() 
 	{
 		return $this ->Id_fornecedor;
@@ -68,6 +80,15 @@ class Intervalo
 	{
 		return $this ->Intervalo;
 			}
+	function getQintervalo() 
+	{
+		return $this ->Qintervalo;
+			}
+	function getQhora() 
+	{
+		return $this ->Qhora;
+			}
+	
 	 
 /*		{
 			GLOBAL $db;
