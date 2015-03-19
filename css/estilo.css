@@ -71,6 +71,12 @@ body{
 
 #boxexcluir{
 	float:right;
-
+	background: #FFFAFA;
+	font: italic 10pt;
+	cursor: pointer;
+	padding: 10px; 
+    border: 1px solid black; 
+    margin: 20px; 
+    width: 100px;
 }
 
