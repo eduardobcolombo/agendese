@@ -1,8 +1,9 @@
 <?php
 
-if ($_POST['Cadastrar'] == 'Cadastrar') {
+
+	if ($_POST['Cadastrar'] == 'Cadastrar') {
 	$objIntervalo->setId_fornecedor($_GET["id"]);
-	$objIntervalo->setId_servico($_POST["DataInicial"]);
+	$objIntervalo->setId_fornecedor($_GET["id"]);
 	$objIntervalo->setDataInicial($_POST["DataInicial"]);
 	$objIntervalo->setDataFinal($_POST["DataFinal"]);
 	$objIntervalo->setHoraInicial($_POST["HoraInicial"]);
@@ -10,11 +11,11 @@ if ($_POST['Cadastrar'] == 'Cadastrar') {
 	$objIntervalo->setIntervalo($_POST["Intervalo"]);
 	$objIntervalo->setDB();
 }
-	
 	$buscaFornecedor = $objFornecedor->getFornecedorById($_GET["id"]);
 
 	$linha = $buscaFornecedor->fetch(PDO::FETCH_OBJ);
 	$nomeFornecedor = $linha->nome;
+	$Id_servico = $linha->Id_servico;
 ?>
         <div id="boxCadastraHorario">
        
@@ -27,11 +28,11 @@ if ($_POST['Cadastrar'] == 'Cadastrar') {
 				<table border=8 cellspacin=10 cellpadding=10>
 					<tr>
 						<td> Fornecedor:</td>
-						<td> <input type="text" name="Id_fornecedor" id="Id_fornecedor" value="<?PHP  echo $nomeFornecedor; ?>." /> </td>
+						<td> <input type="text" name="Id_fornecedor" id="Id_fornecedor" value="<?PHP  echo $nomeFornecedor; ?>" /> </td>
 					</tr>
 					<tr>
 						<td> Serviço:</td>
-						<td> <input type="text" name="Id_servico" id="Id_servico" value="" /> </td>
+						<td> <input type="text" name="Id_fornecedor" id="Id_forncedor" value="<?PHP  echo $Id_servico; ?>" /> </td>
 					</tr>
 					<tr>
 						<td> Data Inicial:</td>
