@@ -27,6 +27,14 @@ if ($_GET['acao'] =='excluir' ) {
 
 		<form name="meusdados" method="POST" action="">
 
+</div>
+
+		<div id="boxexcluir">
+			<a href = 'http://localhost/agendese/?page=meusdados&acao=excluir&id=<?php echo $cliente->Id; ?>' type="button"
+			onClick="javascript:if (confirm('Tem certeza?')){ return true;} else {return false;} ">Excluir</td></a>
+		
+</div>
+
 			<table class="table">
 				<tr>
 					<td align=right>Nome</td>
@@ -44,11 +52,9 @@ if ($_GET['acao'] =='excluir' ) {
 				<tr>
 					<td colspan=2 align=center><input type="submit"  name="Alterar" value="Alterar"/></td>
 				</tr>
-				<tr>
-					<input type="submit" 'http://localhost/agendese/?page=meusdados&acao=excluir&id=<?php echo $cliente->Id; ?>' name="Excluir" value="Excluir"
-					onClick="javascript:if (confirm('Tem certeza?')){ return true;} else {return false;} ">
-			</tr>	 
+ 
 			</table>
+		
 		</form>
 </div>
 
